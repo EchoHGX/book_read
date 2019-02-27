@@ -1,0 +1,23 @@
+﻿.page-container {width:100%;}
+.page-container .coupon-effect-list{margin-top:1rem;}
+.page-container .coupon-expire-list .expire-title{text-align:center}
+.page-container .coupon-expire-list .expire-title img{width:10rem;margin:.6rem;}
+.page-container .coupon{display:block;position:relative;margin:0 auto .6rem;width:20rem;height:5.3rem;background:url(../images/coupon.png) no-repeat;background-size:20rem;}
+.page-container .coupon .symbol{position: absolute;color:#F86974;font-size: 1rem;top: .87rem;left: 1.4rem;font-weight: bold;}
+.page-container .coupon .price{position: absolute;color:#F86974;font-size: 2.4rem;font-weight: bold;top: .3rem;left: 2.4rem;}
+.page-container .coupon .symbol-d{left:.7rem}
+.page-container .coupon .price-d{left: 1.7rem;}
+.page-container .coupon .status{position: absolute;color:#FFABA5;font-size: .7rem;letter-spacing: 1px;bottom: .5rem;left: 1.5rem;}
+.page-container .coupon .title{position: absolute;color:#4C4C4C;top: .6rem;left: 6.4rem;font-size: .9rem;}
+.page-container .coupon .time{position: absolute;color:#909090;top: 2.4rem;left: 6.4rem;font-size: .6rem;}
+.page-container .coupon .tip{position: absolute;color:#D0D0D0;left:6.4rem;bottom: .5rem;font-size: .7rem;letter-spacing: 2px;}
+.page-container .coupon .btn{position:absolute;display:inline-block;padding:.1rem;}
+.page-container .coupon .btn img{width:3.6rem;display:block;}
+.page-container .coupon .act-use{top:.6rem;right:.8rem;}
+.page-container .coupon .act-give{bottom:.6rem;right:.8rem;}
+.page-container .coupon-expire{background:url(../images/coupon-expire.png) no-repeat;background-size: 20rem;}
+.page-container .coupon-expire .symbol{color:#878787}
+.page-container .coupon-expire .price{color:#878787}
+.page-container .coupon-expire .status{color:#878787; left: 1.8rem;}
+.page-container .coupon-not{text-align:center;margin-top:3rem;}
+.page-container .coupon-not img{width:10rem;}

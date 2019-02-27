@@ -1,0 +1,1251 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="title"  content="朵拉小说——追书看小说，超便捷的手机阅读神器">
+	<meta name="keywords"  content="无弹窗小说网小说，免费小说阅读,最热小说排行榜，经典小说排行榜前十名，微微一笑很倾城小说，好看的小说完本推荐，校园言情小说免费阅读，txt小说下载，都市言情小说，穿越玄幻，校园网游，武侠小说">
+	<meta name="description"  content="朵拉小说与国内各大出版社合作，为小说爱好者提供更多更全的各类免费小说上百万本。包括都市言情小说，穿越玄幻，校园网游，武侠小说等等，是年轻人必备的综合小说阅读平台。">
+    <title>充值</title>
+    <link  rel="stylesheet" type="text/css" href="../assets/css/core.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common_1.css" media="all" />
+     <link rel="stylesheet" type="text/css" href="../assets/css/standard_1.css" media="all" />
+    <script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../assets/js/mobile_index.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/channel.js"></script>
+    <script type="text/javascript" src="../assets/js/jweixin-1.3.0.js"></script>
+    <script>
+    	var bid =null;
+		var cid =null;
+		var zmsmall=$.cookie('zmsmall');
+		bid = getParam("bid");
+		cid = getParam("cid");
+    	
+    	channelInit();
+    	
+    	/*100260多好玩渠道，跳转至定制支付页*/
+    	if(channelTools.judgeChannel100260(channel)){
+    		channelTools.goPay100260(bid,cid);
+    	}
+    	
+		var sys =null;
+		var browserLanguage = (navigator.language || navigator.browserLanguage).toLowerCase();
+
+		if($.cookie('sys')!=null){
+			if($.cookie('sys')=="android"){
+				if(bid!=null&&cid!=null){
+					window.location.href="pay_android_wxali_coupon.html?bid="+bid+"&cid="+cid+"&r="+Math.random();
+				}else{
+					window.location.href="pay_android_wxali_coupon.html?r="+Math.random();
+				}
+				
+			}else{
+	  			if($.cookie('v')!=null){
+	  				//目前版本1.4
+	  				if($.cookie('v')>1.8){
+	  					if(bid!=null){
+							window.location.href="pay_os.html?bid="+bid+"&cid="+cid+"&r="+Math.random();
+						}else{
+							window.location.href="pay_os.html?r="+Math.random();
+						}
+				  		
+			  		}else{
+						var cccc = ",,";
+						if(cccc.indexOf(channel)!=-1){
+							if(bid!=null){
+								window.location.href="pay_os_"+channel+".html?bid="+bid+"&cid="+cid+"&r="+Math.random();
+							}else{
+								window.location.href="pay_os_"+channel+".html?r="+Math.random();
+							}
+						}else if (browserLanguage.indexOf('zh') > -1) { 
+							if(bid!=null){
+								window.location.href="pay_os_wxali_coupon.html?bid="+bid+"&cid="+cid+"&r="+Math.random();
+							}else{
+								window.location.href="pay_os_wxali_coupon.html?r="+Math.random();
+							} 
+ 						}else{
+ 							if(bid!=null){
+								window.location.href="pay_os.html_coupon?bid="+bid+"&cid="+cid+"&r="+Math.random();
+							}else{
+								window.location.href="pay_os.html_coupon?r="+Math.random();
+							} 
+						}
+			  		}
+		  		}
+			}
+	  	}
+    </script>
+    	<link href="../assets/css/zmpay.css" rel="stylesheet" />
+    <style type="text/css">
+       .faq_mod{margin-bottom:3rem;background:#fff;padding:10px;font-size:12px;line-height:20px;color:#999;overflow:hidden;}.faq_mod span{display:block;font-size:14px;padding-bottom:5px;}.faq_mod p{color:#333;}
+    </style>
+</head>
+<body>
+<style>
+	.qq-pay-box{display:none;position:fixed;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,.7);z-index:10000;}
+	.qq-pay-box .qq-pay-area{position:relative;border-radius:10px;text-align:center;position:absolute;width:16rem;height:19rem;left:calc(50% - 8rem);top:8rem;background-color:#fff;}
+	.qq-pay-box .qq-pay-area .qq-pay-code{width:12rem;margin-top:1rem;}
+	.qq-pay-box .qq-pay-area .qq-pay-tip{position:absolute;top:14rem;text-align:left;width:14rem;height:3rem;background-color:#425F87;margin-left:1rem;}
+	.qq-pay-box .qq-pay-area .qq-pay-tip .tip-img{width:2rem;margin:.5rem;}
+	.qq-pay-box .qq-pay-area .qq-pay-tip .tip-content1{text-align:center;position:absolute;left:3rem;top:.2rem;display:inline-block;width:10.5rem;height:1.3rem;line-height:1.3rem;color:#fff;font-size:.9rem}
+	.qq-pay-box .qq-pay-area .qq-pay-tip .tip-content2{text-align:center;position:absolute;left:3rem;top:1.4rem;display:inline-block;width:10.5rem;height:1.3rem;line-height:1.3rem;color:#fff;font-size:.9rem}
+	
+</style>
+<div class="qq-pay-box">
+	<div class="qq-pay-area">
+		<img class="qq-pay-code" src="">
+		<div class="qq-pay-tip">
+			<img src="../assets/picture/saomiao.png" class="tip-img">
+			<p class="tip-content1">扫一扫或长按二维码</p>
+			<p class="tip-content2">使用QQ支付</p>
+		</div>
+	</div>
+
+
+</div>
+
+<div class="wrapper">
+    <!-- header start -->
+   <div class='header'>
+		<div class='logo-wrap'>
+		<a href='index.html' class='search-back'><img src='../assets/picture/arrow.png'></a>
+		充值
+		</div>
+	</div>
+	<div class="clear"></div>
+    
+    <style>
+    	#bd{background-color:#F5F5F5;padding-top:1rem}
+    	.pay-type{width:96%;margin:0 auto}
+    	.type-detail{letter-spacing:0.1rem;color:#999999;width:43%;margin: .3rem 3%;text-align:center;line-height:2.5rem;height:2.5rem;float:left;border:1px solid #B1B1B1;border-radius:5px;}
+   		.type-detail img {width:0.95rem;margin-right:0.3rem}
+   		.type-detail .detail-code{display:none}
+   		.pay-type .active{background-color:#fff;border:1px solid #E4E4E4;}
+   		.detail-content{height:100%;}
+    	.active .detail-content{background:url(../assets/images/subsc.png) no-repeat bottom right;background-size:1rem}
+   		.pay-diver{border-bottom:1px dashed #D9D9D9;width:90%;margin:1rem auto}
+    </style>
+    <div id="bd">
+        <div class="pay-type">
+        	<div class="type-detail active type-wx">
+        		<div class="detail-code">2</div>
+        		<div class="detail-content">
+        			<img src="../assets/picture/pay_wechat.png">
+        			微信支付
+        		</div>
+        	</div>
+        	<div class="type-detail type-ali">
+        		<div class="detail-code">1</div>
+        		<div class="detail-content">
+        			<img src="../assets/picture/pay_alipay.png">
+        			支付宝支付
+        		</div>
+        	</div>
+        	<div class="type-detail type-qq">
+        		<div class="detail-code">4</div>
+        		<div class="detail-content">
+        			<img src="../assets/picture/pay_tencent.png">
+        			QQ支付
+        		</div>
+        	</div>
+        	<div class="clear">  </div>
+        </div>
+    	<div class="pay-diver"></div>
+    	<style>
+    		.pay-amount{width:96%;margin:0 auto;}
+    		.amount-detail{letter-spacing:0.1rem;width:43%;margin: 0.2rem 3%;text-align:center;float:left;position:relative;}
+    		.amount-detail img {width:100%}
+    		.amount-detail .detail-gold {position:absolute;top:0.3rem;left:0.6rem;font-weight:bold;color:#FF746D}
+    		.amount-detail .detail-money{position:absolute;bottom:0.5rem;left:0.6rem;color:#656565;font-weight:bold;}
+    		.amount-detail .detail-ticket{position:absolute;top:2rem;left:0.6rem;color:#898989;font-size:0.7rem}
+    		.amount-detail .pay-amount-tip{position:absolute;top:0rem;right:0rem;width:2.2rem}
+    		.amount-detail .detail-chosen{position:absolute;bottom:0.7rem;right:0.7rem;width:1rem;display:none}
+    		.pay-amount .active .detail-gold{color:#fff}
+    		.pay-amount .active .detail-money{color:#fff}
+    		.pay-amount .active .detail-ticket{color:#fff}
+    		.pay-amount .active .detail-chosen{display:inline}
+    		.amount-detail .detail-ticket-val, .amount-detail .detail-code,.amount-detail .detail-money-val{display:none}
+    		.amount-year{display:none;}
+    		.amount-year .rest{position:absolute;bottom:.76rem;right:.2rem;font-size:.7rem;color:#94908D;}
+    		.amount-year .tip{position:absolute;left:0;font-size:.6rem;top:1.6rem;color:#8E807D;overflow:hidden;width:calc(100% - .6rem);text-align:left;padding-left:.6rem;}
+    		.amount-year .timeload{position:absolute;top:2.4rem;color:#FC7373;font-size:.6rem;overflow:hidden;width:calc(100% - .6rem);text-align:left;padding-left:.6rem;}
+    		.rest span{color: #FC7373;font-size: 0.9rem;font-weight: bold;}
+    		.tips{position:fixed;top:25%;left:-3.7%;z-index:125;border-radius:10px;text-align:center;box-shadow:0 0 4px #999;background:rgba(0,0,0,.65);font-size:14px;color:#fff;padding:10px;margin:auto 10%;width:80%;display: none;}
+    		.confirm{height: 6rem;top:15%;}
+			.confirmBtn{margin-top:1.5rem;}
+			.confirmBtn ul li{
+				color: #fff;
+				width: 50%;
+				text-align: center;
+				float: left;
+			}
+			.pay-amount div.amount-year .detail-gold{color:#FF746D;}
+			.pay-amount div.amount-year .detail-money{color:#656565;}
+    	</style>
+    	<div class="pay-amount">
+    		<div class="amount-detail amount-year" id="year2">
+    			<div class="detail-code">-2</div>
+    			<img src="../assets/picture/bg_pay_year.png" class="detail-bg">
+    			<div class="detail-gold">黄金VIP</div>
+    			<div class="detail-ticket"></div>
+    			<div class="detail-money">￥599</div>
+    			<div class="detail-money-val">599</div>
+    			<div class="detail-ticket-val">0</div>
+    			<div class="rest">剩余<span>0</span>份</div>
+    			<div class="tip">小说免费看2年</div>
+    			<div class="timeload">倒计时:<span class="dayload"></span><span class="hourload"></span><span class="minload"></span><span class="secload"></span></div>
+    		</div>
+			<div class="amount-detail amount-year active" id="year1">
+    			<div class="detail-code">-1</div>
+    			<img src="../assets/picture/bg_pay_year_n.png" class="detail-bg">
+    			<div class="detail-gold">白银VIP</div>
+    			<div class="detail-ticket"></div>
+    			<div class="detail-money">￥365</div>
+    			<div class="detail-money-val">365</div>
+    			<div class="detail-ticket-val">0</div>
+    			<div class="rest">剩余<span>0</span>份</div>
+    			<div class="tip">小说免费看1年</div>
+    			<div class="timeload">倒计时:<span class="dayload"></span><span class="hourload"></span><span class="minload"></span><span class="secload"></span></div>
+    		</div>
+<!-- 			<div class="amount-detail"> -->
+<!--     			<div class="detail-code">6</div> -->
+<!--     			<img src="../assets/picture/bg_pay_n.png" class="detail-bg"> -->
+<!--     			<div class="detail-gold">1阅读币</div> -->
+<!--     			<div class="detail-ticket"></div> -->
+<!--     			<div class="detail-money">￥0.01</div> -->
+<!--     			<div class="detail-money-val">0.01</div> -->
+<!--     			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen"> -->
+<!--     		</div> -->
+		
+<!-- 			<div class="amount-detail"> -->
+<!--     			<div class="detail-code">0</div> -->
+<!--     			<img src="../assets/picture/bg_pay_n.png" class="detail-bg"> -->
+<!--     			<div class="detail-gold">100阅读币</div> -->
+<!--     			<div class="detail-ticket"></div> -->
+<!--     			<div class="detail-money">￥1</div> -->
+<!--     			<div class="detail-money-val">1</div> -->
+<!--     			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen"> -->
+<!--     		</div> -->
+
+    		<div class="amount-detail">
+    			<div class="detail-code">1</div>
+    			<img src="../assets/picture/bg_pay_n.png" class="detail-bg">
+    			<div class="detail-gold">3000阅读币</div>
+    			<div class="detail-ticket"></div>
+    			<div class="detail-money">￥30</div>
+    			<div class="detail-money-val">30</div>
+    			<div class="detail-ticket-val">0</div>
+    			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen">
+    		</div>
+    		<div class="amount-detail" id="defaultquan">
+    			<div class="detail-code">2</div>
+    			<img src="../assets/picture/bg_pay_n.png" class="detail-bg">
+    			<img src="../assets/picture/pay-amount-tip-8.3.png" class="pay-amount-tip">
+    			<div class="detail-gold">5000阅读币</div>
+    			<div class="detail-ticket">加送10元阅读券</div>
+    			<div class="detail-money">￥50</div>
+    			<div class="detail-money-val">50</div>
+    			<div class="detail-ticket-val">1000</div>
+    			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen">
+    		</div>
+    		<div class="amount-detail ">
+    			<div class="detail-code">3</div>
+    			<img src="../assets/picture/bg_pay_n.png" class="detail-bg">
+    			<img src="../assets/picture/pay-amount-tip-7.7.png" class="pay-amount-tip">
+    			<div class="detail-gold">10000阅读币</div>
+    			<div class="detail-ticket">加送30元阅读券</div>
+    			<div class="detail-money">￥100</div>
+    			<div class="detail-money-val">100</div>
+    			<div class="detail-ticket-val">3000</div>
+    			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen">
+    		</div>
+    		<div class="amount-detail">
+    			<div class="detail-code">4</div>
+    			<img src="../assets/picture/bg_pay_n.png" class="detail-bg">
+    			<img src="../assets/picture/pay-amount-tip-6.7.png" class="pay-amount-tip">
+    			<div class="detail-gold">20000阅读币</div>
+    			<div class="detail-ticket">加送100元阅读券</div>
+    			<div class="detail-money">￥200</div>
+    			<div class="detail-money-val">200</div>
+    			<div class="detail-ticket-val">10000</div>
+    			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen">
+    		</div>
+    		<div class="amount-detail">
+    			<div class="detail-code">5</div>
+    			<img src="../assets/picture/bg_pay_n.png" class="detail-bg">
+    			<img src="../assets/picture/pay-amount-tip-5.5.png" class="pay-amount-tip">
+    			<div class="detail-gold">50000阅读币</div>
+    			<div class="detail-ticket">加送400元阅读券</div>
+    			<div class="detail-money">￥500</div>
+    			<div class="detail-money-val">500</div>
+    			<div class="detail-ticket-val">40000</div>
+    			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen">
+    		</div>
+    		<div class="amount-detail">
+    			<div class="detail-code">7</div>
+    			<img src="../assets/picture/bg_pay_n.png" class="detail-bg">
+    			<img src="../assets/picture/pay-amount-tip-5.png" class="pay-amount-tip">
+    			<div class="detail-gold">100000阅读币</div>
+    			<div class="detail-ticket">加送1000元阅读券</div>
+    			<div class="detail-money">￥1000</div>
+    			<div class="detail-money-val">1000</div>
+    			<div class="detail-ticket-val">100000</div>
+    			<img src="../assets/picture/pay-money-chosen.png" class="detail-chosen">
+    		</div>
+    		<div class="clear">  </div>
+    	</div>
+    	<div class="tips confirm">
+			<div>您已充值过年卡，到期时间<span class="confirmtime"></span>，确定继续充值？</div>
+			<div class="row confirmBtn">
+				<ul>
+					<li id="no">否</li>
+					<li id="yes">是</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tips" id="tips"></div>
+    	<div class="sale-info">
+    		<div class="sale-amount unit">
+    			<div class="title">支付金额</div>
+    			<div class="desc"><span></span>元</div>
+    			<div class="suffix"></div>
+    		</div>
+    		<a class="coupon-c unit">
+    			<div class="title">代金券</div>
+    			<div class="desc">暂无代金券</div>
+    			<div class="suffix"></div>
+    			<img src="../assets/picture/book_detail_arrow_ico.png">
+    		</a>
+    		<div class="rel-amount unit">
+    			<div class="title">实际充值</div>
+    			<div class="desc"><span></span>元</div>
+    			<div class="suffix"></div>
+    		</div>
+    		<div class="sale-desc unit">
+    			<div class="title">优惠说明</div>
+    			<div class="desc">暂无优惠</div>
+    			<div class="suffix"></div>
+    		</div>
+    	</div>
+    	<style>
+    		.sale-info{background-color:#fff;}
+    		.sale-info .unit{height:3rem;line-height:3rem;position:relative;}
+    		.sale-info .unit .suffix{position:absolute;width:93%;height:1px;background-color:#f5f5f5;bottom:0;right:0;}
+    		.sale-info .unit .title{float:left;margin-left:1rem;color:#959595;letter-spacing:2px;font-weight:bold;font-size:.9rem;}
+    		.sale-info .unit .desc{float:right;margin-right:2rem;letter-spacing:1px;}
+    		.sale-info .coupon-c{display:block;}
+    		.sale-info .coupon-c .desc{color:#FB9496;}
+    		.sale-info .coupon-c img{position:absolute;right:.8rem;height:1rem;top:1rem;}
+    		.sale-info .sale-desc .desc{font-size:.6rem;width:43%;line-height:1rem;text-align:right;margin-top:.6rem;color:#B0B0B0;}
+    	</style>
+		<div class="coupon-area">
+			<div class="coupon-box">
+				
+			</div>
+			<div class="box-close">
+				<img src="../assets/picture/box-cancel.png">
+			</div>
+		</div>    
+    	<style>
+    		.coupon-area{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.7);z-index:99999;}
+    		.coupon-area .coupon-box{overflow-y:auto;width:80%;position:absolute;left:10%;height:21rem;background-color:#fff;top:3rem;border-radius:6px;}
+    		.coupon-area .coupon-box .coupon{display:block;position: relative;margin: 1rem auto;width: 16rem;height: 4.2rem;background: url(../assets/images/coupon.png) no-repeat;background-size: 16rem;}
+    		.coupon-area .coupon-box .coupon .id{display:none;}
+    		.coupon-area .coupon-box .coupon .symbol{position: absolute;color:#F86974;    font-size: .8rem;top: .78rem;left: 1.3rem;font-weight: bold;}
+			.coupon-area .coupon-box .coupon .price{position: absolute;color:#F86974;font-size: 1.6rem;font-weight: bold;top: .5rem;left: 2rem;}
+			.coupon-area .coupon-box .coupon .status{position: absolute;color:#FFABA5;font-size: .7rem;letter-spacing: 1px;bottom: .2rem;left: .8rem;}
+			.coupon-area .coupon-box .coupon .title{position: absolute;color:#4C4C4C;top: .4rem;left: 5rem;font-size: .9rem;}
+			.coupon-area .coupon-box .coupon .time{position: absolute;color:#909090;top: 1.8rem;left: 5rem;font-size: .6rem;}
+			.coupon-area .coupon-box .coupon .tip{position: absolute;color:#D0D0D0;left:5rem;bottom: .2rem;font-size: .7rem;letter-spacing: 2px;}
+			.coupon-area .coupon-box .coupon .chosen-state{background:url(../assets/images/coupon-n.png)no-repeat;background-size:1.4rem;position: absolute;top:1.4rem;right:.8rem;width:1.4rem;height:1.4rem;}
+    		.coupon-area .coupon-box .coupon-a .chosen-state{background:url(../assets/images/coupon-c.png)no-repeat;background-size:1.4rem;}
+    		.coupon-area .coupon-box .coupon-diver{width:15.6rem;height:1px;margin:.3rem auto;background-color:#f5f5f5;}
+    		
+    		
+    		.coupon-area .box-close{width:100%;text-align:center;position:absolute;top:27rem;}
+    		.coupon-area .box-close img{width:2.4rem;}
+    	</style>
+    
+<!--     	<div class="pay-start-normal">普通支付</div> -->
+<!--     	<div class="pay-start-code">扫码支付</div> -->
+<!--     	<div class="pay-start-diver"></div> -->
+    	
+    	
+    	<div class="pay-bottom">
+    		<div class="p-left">
+    			&nbsp;&nbsp;&nbsp;<span class="price">￥<span class="text"></span></span>&nbsp;&nbsp;<span class="p-diver">|</span>&nbsp;&nbsp;<span class="discount">已优惠<span class="text">0</span>元</span>
+    		</div>
+    		<div class="p-right">
+    			充&nbsp;&nbsp;值
+    		</div>
+    	</div>
+    	<style>
+    		.pay-bottom{line-height:3rem;position:fixed;width:100%;height:3rem;bottom:0;left:0;margin-top:3rem;}	
+    		.pay-bottom .p-left{float:left;width:70%;background-color:#626262;height:3rem;}
+    		.pay-bottom .p-left .price{color:#fff;font-size:1rem;}
+    		.pay-bottom .p-left .p-diver{color:#9F9F9F;}
+    		.pay-bottom .p-left .discount{color:#AFAFAF;font-size:.6rem;}
+			.pay-bottom .p-right{text-align:center;color:#fff;float:left;width:30%;background-color:#FD6975;height:3rem;}
+    	</style>
+    </div>
+    <div id="mask"
+		style="filter: Alpha(opacity=30); -moz-opacity: 0.3; -khtml-opacity: 0.3;
+	            opacity: 0.3; background-color: #000; width: 100%; height: 100%;
+	            position: absolute; left: 0; top: 0; display: none; overflow: hidden;">
+	</div>
+
+	
+	<!-- 	支付宝二维码弹窗 -->
+	<div style="display:none">
+		<div id="alipaycode" class="gamezmpay gamezmpaypopup">
+			<div class="gamezmpayheader">请打开支付宝扫一扫完成支付<img id="close_alipaycode" src="../assets/picture/close.png" onclick="closeWin()"/></div>
+			<div class="gamezmpayqrmain">
+				<div style="text-align: center;margin-top: 10px;color:red;">请尽快完成支付<span class="shutdown"></span></div>
+				<div class="gamezmpayqrbox">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 支付宝页面弹窗 -->
+	<div style="display:none">
+		<div id="alipaywap" class="gamezmpay gamezmpaypopup">
+			<div class="gamezmpayheader">支付宝在线付款<img id="close_alipaywap" src="../assets/picture/close.png" onclick="closeWin()"/></div>
+			<div class="gamezmpayqrmain">
+				<div class="gamezmpayqrboxc"  style="margin:0;">
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- 	微信支付二维码弹窗 -->
+	<div style="display:none">
+		<div id="qrcode" class="gamezmpay gamezmpaypopup">
+			<div class="gamezmpayheader">
+				请打开微信扫一扫完成支付<img id="close_qrcode" src="../assets/picture/close.png"  onclick="closeWin()"/>
+			</div>
+			<div class="gamezmpayqrmain">
+				<div style="text-align: center;margin-top: 10px;color:red;">请尽快完成支付<span class="shutdown" ></span></div>
+				<div class="gamezmpayqrbox"></div>
+				<div style="text-align: center;margin-top: 10px;color:red;">长按识别图中二维码</div>
+			</div>
+		</div>
+	</div>
+	<!-- 展鸿支付页面弹窗 -->
+	<div style="display:none">
+		<div id="zhpaywap" class="gamezmpay gamezmzhpaypopup">
+			<div class="gamezmpayheader">微信在线付款<img id="close_zhpaywap" src="../assets/picture/close.png" onclick="closezh()"/></div>
+			<div class="gamezmpayqrmain">
+				<div class="gamezmpayqrboxc"  style="margin:0;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- 提示 -->
+    <div class="faq_mod">
+        <span>温馨提示：</span>
+        1、充值获得的阅读币仅限在本站使用。<br>
+        2、为保证您的资产权益，请使用官方充值方式进行充值。<br>
+        3、充值遇到问题时，请联系客服。<br>
+        4、年费会员即刻生效，不支持退款，请谨慎选择。<br>
+    </div>
+    <!-- 底部分割线 -->
+    <div style="height: 0.4rem;background: #f5f5f5;"></div>
+	
+	
+</div>
+
+
+<script id="coupon" type="text/html">
+{{if couponChosen !=null}}
+<a class="coupon coupon-a" href="javascript:;">
+	<div class="id">{{couponChosen.cid}}</div>	
+	<div class="symbol">￥</div>			
+	<div class="price">{{couponChosen.num / 100}}</div>
+	<div class="status">当前使用</div>
+	<div class="title">朵拉小说{{couponChosen.num / 100}}元红包</div>
+	<div class="time">{{couponChosen.startData}}&nbsp;-&nbsp;{{couponChosen.endData}}</div>
+	<div class="tip">(年卡除外)</div>
+	<div class="chosen-state"></div>
+</a>
+<div class="coupon-diver"></div>
+{{/if}}
+{{each listNot as v i}}
+	<a class="coupon" href="javascript:;">
+		<div class="id">{{v.cid}}</div>		
+		<div class="symbol">￥</div>			
+		<div class="price">{{v.num / 100}}</div>
+		<div class="status">本券可用</div>
+		<div class="title">朵拉小说{{v.num / 100}}元红包</div>
+		<div class="time">{{v.startData}}&nbsp;-&nbsp;{{v.endData}}</div>
+		<div class="tip">(年卡除外)</div>
+		<div class="chosen-state"></div>
+	</a>
+{{/each}}
+</script>
+
+<script src="../assets/js/jquery.qrcode.js" type="text/javascript"></script>
+<script src="../assets/js/qrcode.js" type="text/javascript"></script>
+<script type="text/javascript" src="../assets/js/template.js"></script>	
+
+<script>
+
+	/*开始时间*/
+	var startMill = 1518048000000;
+	/*结束时间*/
+	var endMill = 1519401600000;
+	var date = new Date();
+	var dateMill = date.getTime();
+	var countDown =null;
+	if(channel=="100272"){
+		$(".type-wx").removeClass("active");
+		$(".type-ali").addClass("active");
+	}
+	var user = userInit();
+	if(isLogin){
+		var uid=user.userinfo.pid;
+		if(uid=="100000000055225"||uid=="100000000082018"||uid=="100000000089229"||uid=="100000000079663"||uid=="100000000005388"||uid=="100000000025224"||uid=="100000000028756"||uid=="100000000126847"||uid=="100000000075872"
+			||uid=="100000000130412"||uid=="100000000102788"||uid=="100000000059165"||uid=="100000000093372"||uid=="100000000014675"||uid=="100000000054036"||uid=="100000000014172"||uid=="100000000053887"||uid=="100000000115090"
+			||uid=="100000000031783"||uid=="100000000082403"||uid=="100000000033055"){
+			startMill = 1517932800000;
+			endMill = 1518019200000;
+			$("#year1").removeClass("active");
+			$('#year1 .detail-bg').attr('src','images/bg_pay_year.png');
+			$("#defaultquan").addClass("active");
+			$('#defaultquan .detail-bg').attr('src','images/bg_pay_h.png');
+		}
+	}
+// 	channel = '100270'||
+	if(channel == '100270'||(dateMill>=startMill&&dateMill<=endMill)){
+		$('.amount-year').show();
+		var year =date.getFullYear();
+		var month = date.getMonth();
+		var day = date.getDate();
+		var dayT = new Date(year,month,(day+1),0,0,0);
+		var secondsLast =parseInt((endMill - date.getTime())/1000);
+		var d ={};
+		d.leave =secondsLast;
+		d.days = '00';
+		d.hours = '00';
+		d.minutes = '00';
+		d.seconds = '00';
+		
+		doActionSer("annualFeeLeftNum",{},2,true,function(res){
+			console.log(res);
+			if(res.result.retcode=='1'){
+				$('#year1 .rest span').html(res.result.yearnum1);
+				$('#year2 .rest span').html(res.result.yearnum2);
+			}else{
+				$('.amount-year').hide();
+				$("#year1").removeClass("active");
+				$('#year1 .detail-bg').attr('src','images/bg_pay_year.png');
+				$("#defaultquan").addClass("active");
+				$('#defaultquan .detail-bg').attr('src','images/bg_pay_h.png');
+			}
+		
+		});
+
+var mininum=0;		
+function wxmini(){
+	var wxmini=window.__wxjs_environment;
+	mininum++;
+	if(mininum>100){window.clearTimeout(time1)}
+	if (typeof wxmini != "miniprogram") {var timer1=window.setTimeout("wxmini()",1000);return;}
+	$(".pay-type .type-ali").hide();
+	$(".pay-type .type-qq").hide(); 
+}
+wxmini();		
+		function getRestTime(){
+			d.leave--;
+			if(d.leave>=0){
+				var leave = d.leave % (12 * 30 * 24 * 3600);  
+				//计算出相差天数
+				var leave0 = leave % (30 * 24 * 3600);
+				d.days = d.leave < 0 ? 0 :Math.floor(leave0 / (24 * 3600));
+				//计算出小时数
+				var leave1 = leave0 % (24 * 3600);    
+				d.hours = d.leave < 0 ? 0 : Math.floor(leave1 / 3600);
+				//计算相差分钟数
+				var leave2 = leave1 % (3600);         
+				d.minutes = d.leave < 0 ? 0 : Math.floor(leave2 / 60);
+				//计算相差秒数
+				var leave3 = leave2 % (60);       
+				d.seconds = d.leave < 0 ? 0 : Math.round(leave3 );
+				
+				for(var key in d){
+					if(key!=="leave"){
+						d[key]=d[key] < 10 ? '0' + d[key] : '' + d[key];
+					}
+				}
+				if(d.days=="00"){
+					$(".amount-year .timeload .dayload").hide();
+					$(".amount-year .timeload .hourload").html(d.hours+":");
+					$(".amount-year .timeload .minload").html(d.minutes+":");
+					$(".amount-year .timeload .secload").html(d.seconds);
+				}else{
+					$(".amount-year .timeload .dayload").html(d.days+"天");
+					$(".amount-year .timeload .hourload").html(d.hours);
+					$(".amount-year .timeload .hourload,.amount-year .timeload .secload,.amount-year .timeload .minload").hide();
+				}
+			}else{
+				$('.amount-year').hide();
+			
+				if(countDown){
+					clearInterval(countDown);
+				}
+			}
+		}
+		countDown = setInterval(getRestTime,1000);
+	}else{
+		$('.amount-year').hide();
+		$("#year1").removeClass("active");
+		$('#year1 .detail-bg').attr('src','images/bg_pay_year.png');
+		$("#defaultquan").addClass("active");
+		$('#defaultquan .detail-bg').attr('src','images/bg_pay_h.png');
+	}
+
+
+	function _auto(){var e=360,t=document.documentElement.clientWidth;if(t!==e){var n=document.getElementsByTagName("head")[0],m=document.createElement("style");m.innerHTML="html{font-size:"+t/e*100+"%;}",n.appendChild(m);}};
+	_auto();
+    window.onresize=function(){_auto();};
+
+	/*支付类别选择*/
+	$(".type-detail").click(function(){
+  		$(".type-detail").removeClass('active');
+  		$(this).addClass('active');
+  		var pay_type =Number($('.pay-type .active .detail-code').html());
+	});
+	
+	/*支付金额显示区域*/
+	var $priceAllArea = $('.sale-info .sale-amount .desc span');
+	/*实际支付金额显示区域*/
+	var $priceRelArea = $('.sale-info .rel-amount .desc span');
+	/*优惠说明显示区域*/
+	var $discountArea = $('.sale-info .sale-desc .desc');
+	var $couponPriceArea = $('.sale-info .coupon-c .desc');
+	
+	var $bottomPriceArea = $('.pay-bottom .p-left .price .text');
+	var $bottomDisArea = $('.pay-bottom .p-left .discount .text');
+	
+	var $couponArea = $('.coupon-area');
+	
+	
+	/*代金券金额*/
+	var couponPrice = 0;
+	var conponId = getParam('couponid')?getParam('couponid'):0;
+	
+	var yearCoupon = 0;
+	
+	var couponChosen = null;
+	var couponNot = [];
+	var list = null;
+	var effect =[];
+	
+	
+	
+	var pid =null;
+	channelInit();
+	
+	var user = userInit();
+	if(isLogin){
+		pid=user.userinfo.pid;
+		if(conponId!=0){
+			doActionSer("couponInfo",{"cid":""+conponId},2,true,function(res){
+				console.log(res);
+				if(res.result.status!=1){
+					alert('该红包已被使用或过期');
+					urlTo('p-center.html');
+				}
+			});
+		}
+		/*获取有效的红包*/
+		doActionSer("getUserCoupon",{"pid":""+pid,'status':'1'},2,true,function(res){
+			console.log('红包信息：');
+			console.log(res);
+			var couponList = res.result.couponList;
+			if(couponList){
+				effect = couponList;
+				var findFlag=0;
+				/*遍历红包列表，查找选择的红包*/
+				for(var i=0;i<couponList.length;i++){
+					var coupon = couponList[i];
+					if(coupon.cid == conponId){
+						findFlag =1;
+						couponPrice = parseInt(coupon.num)/100;
+						break;
+					}
+				}
+				/*未找到红包，则做无红包处理*/
+				if(!findFlag){
+					conponId =0;
+				}
+				/*红包初始化*/
+				couponHandle();
+				if(couponPrice!=0){
+					$couponPriceArea.html(couponPrice+'元');
+				}else{
+					$couponPriceArea.html('已有代金券，可选择');
+				}
+				
+				$('.sale-info .coupon-c').attr('href','javascript:;');
+				$('.sale-info .coupon-c').on('click',function(){
+					$couponArea.show();
+				});
+				$('.coupon-area .box-close img').on('click',function(){
+					$couponArea.hide();
+				});	
+			}
+			/*默认选中年费时，移除红包效果*/
+			yearCoupon = couponPrice;
+			couponPrice = 0;
+			$(this).find('.detail-bg').attr('src','images/bg_pay_year_n.png');
+			$('.sale-info .coupon-c').off('click');
+			$('.amount-year .detail-gold').css('color','#FF746D');
+			$('.amount-year .detail-money').css('color','#656565');
+			$discountArea.html('暂无优惠');
+			$discountArea.css('text-align','right');		
+
+			/*价格初始化*/
+			priceHandle();
+
+			$couponPriceArea.html('年费会员暂不支持使用红包');
+			/*end*/	
+		});
+	}else{
+		alert('请先进行登录');
+		urlTo('p-center.html');
+	}
+	
+	
+	/*价格处理*/
+	function priceHandle(){
+		var price = parseInt($('.pay-amount .active .detail-money-val').html());
+		var ticket = parseInt($('.pay-amount .active .detail-ticket-val').html());
+		$priceAllArea.html(price);
+		$priceRelArea.html(price-couponPrice);
+		$bottomPriceArea.html(price-couponPrice);
+ 		$bottomDisArea.html(couponPrice);
+ 		if(couponPrice!=0){
+			$couponPriceArea.html(couponPrice+'元');
+		}else if(couponPrice ==0 && effect.length>0){
+			$couponPriceArea.html('已有代金券，可选择');  
+		}else{
+			$couponPriceArea.html('暂无代金券');
+		}
+ 		if(couponPrice!=0){
+ 			$discountArea.css('text-align','left');
+ 			$discountArea.html('充值优惠'+couponPrice+'元，获得'+(price-couponPrice)*100+'阅读币与'+(ticket+couponPrice*100)+'阅读券');
+ 		}
+	}
+	
+	/*代金券选择框处理*/
+	function couponHandle(){
+		couponChosen = null;
+		couponNot = [];
+		list = null;
+		for(var i=0;i<effect.length;i++){
+			var coupon = effect[i];
+			if(coupon.cid == conponId){
+				couponChosen = coupon;
+			}else{
+				couponNot.push(coupon);
+			}
+		}
+		list ={'listNot':couponNot,'couponChosen':couponChosen};
+		var html = template('coupon', list);
+		$('.coupon-area .coupon-box').html(html);
+		$('.coupon-area .coupon-box .coupon').on('click',function(){
+			conponId = $(this).find('.id').html();
+			couponHandle();
+			couponPrice = $(this).find('.price').html();
+			priceHandle();
+			$couponArea.hide();
+		});
+	}
+	
+	
+	/*支付金额选择*/
+	$(".amount-detail").click(function(){
+		$(".amount-detail .detail-bg").attr('src','images/bg_pay_n.png');
+  		$(".amount-detail").removeClass('active');
+  		$(this).addClass('active');
+  		
+  		$(".amount-year .detail-bg").attr('src','images/bg_pay_year.png');
+  		if($(this).hasClass('amount-year')){
+  			/*选中年费*/
+			yearCoupon = couponPrice;
+			couponPrice = 0;
+			$couponPriceArea.html('年费会员暂不支持使用红包');
+			$(this).find('.detail-bg').attr('src','images/bg_pay_year_n.png');
+			$('.sale-info .coupon-c').off('click');
+			$('.amount-year .detail-gold').css('color','#FF746D');
+			$('.amount-year .detail-money').css('color','#656565');
+			$discountArea.html('暂无优惠');
+			$discountArea.css('text-align','right');
+  		}else{
+  			/*曾选中过年费及红包，恢复红包价格*/
+  			if(yearCoupon!=0){
+  				couponPrice = yearCoupon;
+  				$couponPriceArea.html(couponPrice+'元');
+  			}
+  			
+  			if(couponPrice!=0){
+  				$couponPriceArea.html(couponPrice+'元');
+  				$('.sale-info .coupon-c').on('click',function(){
+					$couponArea.show();
+				});
+  			}else if(couponPrice ==0 && effect.length>0){
+				$couponPriceArea.html('已有代金券，可选择');  
+				$('.sale-info .coupon-c').on('click',function(){
+					$couponArea.show();
+				});
+  			}else{
+  				$couponPriceArea.html('暂无代金券');
+  			}
+  			
+  			
+  			$(this).find('.detail-bg').attr('src','images/bg_pay_h.png');
+  		}
+  		
+  		var price = parseInt($(this).find('.detail-money-val').html());
+  		$priceAllArea.html(price);
+  		var pricerel = price - couponPrice;
+  		$priceRelArea.html(pricerel);
+  		var ticketGiv = parseInt($(this).find('.detail-ticket-val').html());
+  		if(couponPrice!=0){
+  			$discountArea.html('充值优惠'+couponPrice+'元，获得'+pricerel*100+'阅读币与'+(ticketGiv+couponPrice*100)+'阅读券');
+  			$discountArea.css('text-align','left');
+  		}
+  		$bottomPriceArea.html(pricerel);
+  		$bottomDisArea.html(couponPrice);
+  		
+  		
+	});
+
+	/*普通支付发起*/
+	$(".pay-start-normal").click(function(){
+		ptype=1;
+		getValToPay();
+	});
+	
+	
+	$('.pay-bottom .p-right').on('click',function(){
+		getValToPay();
+	});	
+
+	function getValToPay(){
+		/*pay_type:
+			2:微信	1:支付宝    4:QQ
+		*/
+		var pay_type =Number($('.pay-type .active .detail-code').html());
+		var pay_money =Number($('.pay-amount .active .detail-code').html());
+		var isVip =0;
+		if(pay_money==-1){
+			isVip=1;
+		}else if(pay_money=="-2"){
+			isVip=2;
+		}
+		var pay_code=getPayCode(pay_type,pay_money);
+		var moneyval = Number($('.pay-amount .active .detail-money-val').html())-couponPrice;
+		pay(pay_code,pay_type,moneyval,isVip);
+	}
+
+	function getPayCode(pay_type,pay_money){
+		if(pay_type==1){
+			switch(pay_money){
+				case -1:return -2;/*年费365元*/
+// 				case -1:return -4;
+				case 0: return 26;/*1元*/
+				case 1:return 34;/*30元*/
+				case 2:return 35;/*50元*/
+				case 3:return 36;/*100元*/
+				case 4:return 37;/*200元*/
+				case 5:return 38;/*500元*/
+				case 7:return 49;/*1000元*/
+				case -2:return 52;/*两年年费*/
+			}
+		}else if(pay_type==2){
+			switch(pay_money){
+				case -1:return -1;/*年费365元*/
+// 				case -1:return -5;
+				case 0:return 27;/*1元*/
+				case 1:return 39;/*30元*/
+				case 2:return 40;/*50元*/
+				case 3:return 41;/*100元*/
+				case 4:return 42;/*200元*/
+				case 5:return 43;/*500元*/
+				case 7:return 50;/*1000元*/
+				case -2:return 53;/*两年年费*/
+			}
+		}else if(pay_type==4){
+			switch(pay_money){
+				case -1:return -3;/*年费365元*/
+// 				case -1:return -6;
+				case 0:return 28;/*1元*/
+				case 1:return 44;/*30元*/
+				case 2:return 45;/*50元*/
+				case 3:return 46;/*100元*/
+				case 4:return 47;/*200元*/
+				case 5:return 48;/*500元*/
+				case 6:return 33;/*0.01元*/
+				case 7:return 51;/*1000元*/
+				case -2:return 54;/*两年年费*/
+			}
+		}
+	}
+
+
+	//支付方式
+	var ptype=1;
+	
+	var clength=0;
+	
+	var result =null;
+	
+    var paycall = null;
+	var qrcode =null;
+	var amount=null;
+	var feename=null;
+	var xdata ={};
+	var orderNo =null;
+	var paytype = null;
+	var alipaywap =null;
+	var alipaycode =null;
+	var zhpaywap = null;
+    var dlgedit =$("#gamezmpay").parent();
+    function sd(){var a=$(".shutdown").html();$(".shutdown").html(((a-1)>9)?(a-1):('0'+(a-1)))};
+	_client = function(){
+		return {w:document.documentElement.scrollWidth,h:document.documentElement.scrollHeight,bw:document.documentElement.clientWidth,bh:document.documentElement.clientHeight};
+	};
+	
+	function pay(id,type,moneyval,isVip){
+		if(!isLogin){
+			window.location.href="p-center.html?origin=8";
+		}
+		
+		amount=moneyval;
+		feename='朵拉充值'+amount+'元';
+		if(type=='2'){
+			paytype="weixin";
+		}else if(type=='1'){
+			paytype="alipay";
+		}else if(type=='4'){
+			paytype="qqpay";
+		}
+		
+		if(bid==null){
+			bid="";
+		}
+// 		alert("channel----"+channel)
+		if(isVip==0){
+			if(conponId==0){
+				doActionSer("getOrderNo",{"pid":pid,"id":''+id,"channel":channel,"isVIP":''+isVip,"bid":bid+''},2,true,subrecall);
+			}else{
+				doActionSer("couponInfo",{"cid":""+conponId},2,true,function(res){
+					console.log(res);
+					if(res.result.status==1){
+						doActionSer("getCouponOrderNo",{"pid":pid,"id":''+id,"channel":channel,"bid":bid+'','cid':''+conponId},2,true,subrecall);
+					}else{
+						alert('该红包已被使用或过期');
+						urlTo('p-center.html');
+					}
+				});
+					
+			}
+		}else{
+			doActionSer("getWechatUserInfo",{"pid":""+pid,"type":"2"},2,true,function(res){
+				console.info(res);
+				if(res.result.vip&&res.result.vip!="0"){
+					$(".confirm").show();
+					var timesta=timestampToTime(res.result.vip);
+					$(".confirm .confirmtime").html(timesta);
+				}else{
+					$(".confirm").hide();
+					doActionSer("annualFeeLeftNum",{},2,true,function(res){
+						console.log(res);
+						if(res.result.retcode=='1'){
+							if(isVip=="1"){
+								if(res.result.yearnum1!="0"){
+									doActionSer("getOrderNo",{"pid":pid,"id":''+id,"channel":channel,"isVIP":''+isVip,"bid":bid+''},2,true,subrecall);
+								}else{
+									$('#tips').show().text("今日已抢完，明日继续！");closeTips();
+								}
+							}
+							if(isVip=="2"){
+								if(res.result.yearnum2!="0"){
+									doActionSer("getOrderNo",{"pid":pid,"id":''+id,"channel":channel,"isVIP":''+isVip,"bid":bid+''},2,true,subrecall);
+								}else{
+									$('#tips').show().text("今日已抢完，明日继续！");closeTips();
+								}
+							}
+						}else{
+							$('.amount-year').hide();
+						}
+					
+					});
+				}
+				$(".confirm #no").click(function() {
+					$(".confirm").hide();
+				});
+				$(".confirm #yes").click(function() {
+					$(".confirm").hide();
+					doActionSer("annualFeeLeftNum",{},2,true,function(res){
+						console.log(res);
+						if(res.result.retcode=='1'){
+							if(isVip=="1"){
+								if(res.result.yearnum1!="0"){
+									doActionSer("getOrderNo",{"pid":pid,"id":''+id,"channel":channel,"isVIP":''+isVip,"bid":bid+''},2,true,subrecall);
+								}else{
+									$('#tips').show().text("今日已抢完，明日继续！");closeTips();
+								}
+							}
+							if(isVip=="2"){
+								if(res.result.yearnum2!="0"){
+									doActionSer("getOrderNo",{"pid":pid,"id":''+id,"channel":channel,"isVIP":''+isVip,"bid":bid+''},2,true,subrecall);
+								}else{
+									$('#tips').show().text("今日已抢完，明日继续！");closeTips();
+								}
+							}
+						}else{
+							$('.amount-year').hide();
+						}
+					
+					});
+				});
+			});
+		}
+		
+		
+	}
+	function closeTips(){setTimeout("$('#tips').hide()",1800);}
+	function timestampToTime(timestamp) {
+        var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        Y = date.getFullYear() + '-';
+        M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        D = date.getDate()<10?'0'+date.getDate()+' ':date.getDate()+ ' ';
+        h = date.getHours() + ':';
+        m = date.getMinutes() + ':';
+        s = date.getSeconds();
+        return Y+M+D+h+m+s;
+    }
+	function subrecall(res){
+		orderNo=0;
+		if(res.result.retcode==1){
+			orderNo=res.result.orderno;
+			xdata.cporderid=orderNo;
+			xdata = {
+				appcode: 'shuke',
+				appname: 'shuke',
+				openid:0,
+				version:1,
+				action:'pay',
+				sign:0
+				}; 
+			xdata.amount=amount*100;
+			xdata.feename=feename;
+			xdata.cporderid=orderNo;
+			nextpay(orderNo,feename,amount*100);		
+		}
+	}
+	
+    function closeWin(){
+    	if(paytype=="weixin")
+    		{qrcode.hide();}
+    	else
+    		{alipaywap.hide();}
+    	hideMask("mask");
+    	
+    }
+        	
+    function hideMask(id) {
+		document.getElementById(id).style.display = "none";
+	}
+	function showMask(id) {
+		var obj = document.getElementById(id);
+		obj.style.width = _client().bw>_client().w?_client().bw:_client().w+"px";
+		obj.style.height = _client().bh>_client().h?_client().bh:_client().h+"px";
+		obj.style.display = "block";
+		obj.style.zIndex = "9997";
+	}
+	
+        function nextpay(orderNo,feename,amount) {
+        	var url;
+			var data = xdata;
+        	
+        	/*qq支付*/
+        	if(paytype=="qqpay"){
+        		
+        		doActionSer("QQPay",{"pid":pid,"orderid":orderNo+'',"money":amount+'',"trade_type":"NATIVE"},2,true,function(res){
+					console.log(res);
+					if(res.result.retcode==1){
+						checkgflag = 0;
+						if(paycall!=null){
+						 	window.clearInterval(paycall);
+						 	paycall = null;
+						}
+						
+						var codeUrl =res.result.code_url;
+						$('.qq-pay-box .qq-pay-area .qq-pay-code').attr('src','getImg?url='+codeUrl);
+						paycheck(orderNo);
+						$('.qq-pay-box').show();
+		        		$('.qq-pay-box').on('click',function(){
+		        			if(paycall!=null){
+							 	window.clearInterval(paycall);
+							 	paycall = null;
+							}
+		        			$('.qq-pay-box').hide();
+		        			$('.qq-pay-box').off('click');
+		        			$('.qq-pay-box .qq-pay-area').off('click');
+		        		});
+		        		$('.qq-pay-box .qq-pay-area').on('click',function(e){
+							 e.stopPropagation();
+		        		});        		
+						
+					}
+	        		
+	        	});
+        		
+        		
+        	}
+        	
+        	
+			if(ptype==1 && paytype=="weixin"){
+				if(is_weixn()){
+					var url ="http://dl.lsqudong.com/";
+					if(bid!=null&&cid!=null){
+						url+='b-read-new.html?bid='+bid+'&cid='+cid+'&channel='+channel;
+					}else{
+						url+='p-center.html?origin=8';
+					}
+					url = encodeURIComponent(url);
+					window.location.href="http://iwatch.zmapp.com/novelwxpay.jsp?url="+url+"&order="+orderNo+"&money="+amount+"&body="+feename;
+				}else{
+					url = "http://hlgame.mz30.cn/order/weixin";
+					data.weixinflag = 2;
+				}
+			}else{
+				if (paytype == "weixin") {
+					url = "http://hlgame.mz30.cn/order/weixin";
+					if(is_weixn()){
+						data.weixinflag = 0;
+						data.weixin = {};
+					}else{
+						data.weixinflag = 2;
+						data.weixin = {};
+					}
+				}else if (paytype == "alipay"){ 
+					url = "http://hlgame.mz30.cn/order/alipay";
+						//data.alipayflag = 0;
+				}
+			}
+			
+			if(paytype == "alipay"){
+				if(!is_weixn()){
+					$.ajax({
+						type : "POST",
+						url : url,
+						data : data,
+						dataType : 'json',
+						success : function(result) {
+							var qrurl=result.orderurl;
+							urlTo(qrurl);
+						}
+					});		
+				}else{
+					var str = encodeURIComponent(JSON.stringify(data));
+					urlTo('pay-browser.html?str='+str);
+				}
+			}else{
+	 			$.ajax({
+					type : "POST",
+					url : url,
+					data : data,
+					dataType : 'json',
+					success : function(result) {
+						hideMask("mask");
+						dlgedit.hide();
+						if(result.code=="0"){
+							alert("生成订单失败！");
+							return;
+						}
+						var qrurl;
+						if (paytype == "weixin") {
+								if(is_weixn()){
+									qrurl = result.weixin.qrurl;
+									$('#qrcode .gamezmpayqrbox').empty();
+									$('#qrcode .gamezmpayqrbox').append("<img width='100%' src='../assets/picture/9ff7fb42d80f41fe9b22f978cd7b05ea.gif"+qrurl+"'>");
+									showMask("mask");
+									var w = $('#alipaycode').width()-60;
+									$('#qrcode .gamezmpayqrbox').css("width", w);
+									$('#qrcode .gamezmpayqrbox').css("height", "80%");
+									if (qrcode == null){qrcode =  $("#qrcode").parent();}
+									qrcode.show();
+		 							paycheck(orderNo);
+								}else{
+									//浏览器中，微信支付，跳转至展鸿页面
+									var callBackUrl = 'index.html'; 
+									if(bid&&cid){
+										callBackUrl = 'b-read.html?bid='+bid+'&cid='+cid;
+									}else if(bid){
+										callBackUrl = 'b-detail.html?bid='+bid;
+									};
+									localSto.setLocalStorage('callBackUrl',callBackUrl);
+									window.location.href=result.weixin.zhurl+'';
+										//$('#zhpaywap .gamezmpayqrboxc').html("<iframe src='"+result.weixin.zhurl+"' style='width:99%;height: 100%'>");
+										//$('.gamezmpayqrboxc').css("height", "100%");
+										//$('.gamezmpayqrmain').css("height", "100%");
+										//$('#zhpaywap').css("height", "100%");
+										//showMask("mask");
+									  //  if(zhpaywap == null)
+									   // 	zhpaywap = $("#zhpaywap").parent();
+									   //	zhpaywap.show();
+								}
+						}
+					}
+				});		
+			}
+			
+		}
+        	
+       
+			var checkgflag = 0;      
+
+			function paycheck(orderId){
+				if(paycall!=null){
+				 	window.clearInterval(paycall);
+				 	paycall = null;
+				}
+					paycall = setInterval(function(){doActionSer("checkOrderNo",{"orderno":orderId},2,true,checkrecall);},5000);
+				
+			}
+			function checkrecall(res){
+				if(checkgflag>=10){
+					clearInterval(paycall);  
+					 window.location.href="p-center.html?origin=8"; 
+				}
+				checkgflag++;
+				if(res.result.retcode=='1'){
+					clearInterval(paycall);  
+					if(pid!=null&&cid!=null){	
+						window.location.href="b-read-new.html?cid="+cid+"&bid="+bid+'&channel='+channel; 
+					}else{
+						 window.location.href="p-center.html?origin=8"; 
+					}
+					
+				}
+				
+			}
+			
+		    function closezh(){
+				$('#zhpaywap').parent().hide();
+				$('#mask').hide();
+			}
+		    doActionSer("mainPageCount",{"channel":""+channel,"page_id":'16',"first_id":'',"second_id":''},2,true,function(res){});
+</script>
+
+
+</body>
+</html>

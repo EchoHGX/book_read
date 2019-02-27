@@ -1,0 +1,12 @@
+﻿ input[type=radio],input[type=checkbox],input[type=submit],input[type=button]{-webkit-appearance: none;-moz-appearance: none;-webkit-user-select: none;-moz-appearance: none;-webkit-tap-highlight-color: rgba(0,0,0,0);-moz-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;-moz-touch-callout: none;-webkit-touch-callout: none}
+    input::-webkit-input-placeholder{color:#999;outline:none;font-size:14px;}
+    textarea::-webkit-input-placeholder{color:#999;font-size:14px;outline:none}
+    .consume_record{border-bottom: 1px solid #f5f5f5;padding: 0.6rem 0.8rem 0.2rem 0.8rem;}
+    .consume_record ul li{
+        color: #555555;
+        font-size: 1rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .no_record{width: 100%;text-align: center;font-size: 1rem;margin-top: 5rem;display: none;color: #ccc;}
+    .no_record img{width:5rem;margin-bottom: 1rem;}

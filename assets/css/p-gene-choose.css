@@ -1,0 +1,17 @@
+﻿/*基因*/
+    	.gene_title{text-align:center;margin-top:1.6rem;font-size:1.4rem;color:#DF5753;border-bottom:1px solid #f5f5f5; padding-bottom:1.2rem}
+ 		.gene_sub{font-size:14px;color:#C9C9C9;padding:2rem 0 0 1.5rem;}
+ 		.gene_girl,.gene_boy{padding-top:1rem}
+ 		.gene_boy_not{float:left;border-radius:1.6rem;line-height:1.6rem;border:1px solid #fff;width:5rem;height:1.6rem;text-align:center;margin-right:1rem}
+ 		.gene_boy_list .gene_choose{border:1px solid #98BDFF;background-color:#98BDFF;color:#fff}
+ 		.gene_girl_not{float:left;border-radius:1.6rem;line-height:1.6rem;border:1px solid #fff;width:5rem;height:1.6rem;text-align:center;margin-right:1rem}
+ 		.gene_girl_list .gene_choose{border:1px solid #F19FC2;background-color:#F19FC2;color:#fff}
+ 		.gene_boy_title{font-size:14px;color:#98BDFF;padding-left:2.4rem;}
+ 		.gene_boy_list{color:#C0C0C0;font-size:14px}
+ 		.gene_list_row{padding-left:2rem;padding-top:1rem;}
+ 		.gene_girl_title{font-size:14px;color:#B47C9C;padding-left:2.4rem}
+ 		.gene_girl_list{color:#C0C0C0;font-size:14px}
+ 		.clear{clear:both}
+ 		.button{text-align:center;margin-top:3rem;}
+ 		.button_content{color:#fff;border:1px solid #E98D8B;padding:0.3rem 0.7rem;background-color:#EC9C9A;width:10rem;border-radius:3rem;margin:0 auto;}
+ 	

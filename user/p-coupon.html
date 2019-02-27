@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>我的红包</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/core.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common_1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/standard_1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/p-coupon.css" media="all" />
+</head>
+<body>
+	<div class="page-container">
+		<div class="header">
+			<div class="logo-wrap">
+				<a href="javascript:history.go(-1)" class="search-back"><img src="../assets/picture/arrow.png"></a>
+				<span>我的红包</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- 红包有效 -->
+	<script id="coupon" type="text/html">
+	<div class="coupon-effect-list">
+	{{each list as v i}}
+		<div class="coupon">
+			{{if v.num / 1000 >=1}}
+				<div class="symbol symbol-d">￥</div>		
+				<div class="price price-d">{{v.num / 100}}</div>
+			{{else}}	
+				<div class="symbol">￥</div>				
+				<div class="price">{{v.num / 100}}</div>
+			{{/if}}
+			<div class="status">本券可用</div>
+			<div class="title">书客小说{{v.num / 100}}元红包</div>
+			<div class="time">{{v.startData}}&nbsp;-&nbsp;{{v.endData}}</div>
+			<div class="tip">(年卡除外)</div>
+			<a class="act-use btn" href="pay-coupon.html?couponid={{v.cid}}"><img src="../assets/picture/btn-use.png" ></a>
+			<a class="act-give btn" href="p-coupon-detail.html?cid={{v.cid}}"><img src="../assets/picture/btn-give.png" ></a>
+		</div>
+	{{/each}}
+	</div>
+	</script>
+	<!-- 红包失效 -->
+	<script id="coupon-expire" type="text/html">
+	<div class="coupon-expire-list">
+		<div class="expire-title">
+			<img src="../assets/picture/expire-title.png">
+		</div>
+		{{each list as v i}}
+		<div class="coupon coupon-expire">
+			{{if v.num / 1000 >=1}}
+				<div class="symbol symbol-d">￥</div>		
+				<div class="price price-d">{{v.num / 100}}</div>
+			{{else}}	
+				<div class="symbol">￥</div>				
+				<div class="price">{{v.num / 100}}</div>
+			{{/if}}
+			
+			<div class="status">
+				{{if v.status =='2'}}
+				已使用
+				{{else if v.status =='3'}}
+				已转增
+				{{else if v.status =='4'}}				
+				已过期
+				{{/if}}
+			</div>
+			<div class="title">书客小说{{v.num / 100}}元红包</div>
+			<div class="time">{{v.startData}}&nbsp;-&nbsp;{{v.endData}}</div>
+			<div class="tip">(年卡除外)</div>
+			<a class="act-use btn"><img src="../assets/picture/btn-use-expire.png" ></a>
+			<a class="act-give btn"><img src="../assets/picture/btn-give-expire.png" ></a>
+		</div>	
+		{{/each}}
+	</div>
+	</script>
+	<!-- 无红包 -->
+	<script id="coupon-not" type="text/html">
+	<div class="coupon-not">
+		<img src="../assets/picture/coupon-not.png">
+	</div>
+	</script>
+	<script type="text/javascript" src="../assets/js/template.js"></script>	
+	<script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>	
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/p-coupon.js"></script>
+
+</body>
+</html>

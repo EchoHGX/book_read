@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>签到记录</title>
+    <meta content="zh-cn" http-equiv="Content-Language">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <link rel="stylesheet" type="text/css" href="../assets/css/core.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/standard_2.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/p-sign.css" media="all" />
+</head>
+<body>
+
+	<div class="page-container">
+		<div class="bg-sign">
+			<img src="../assets/picture/bg-sign.png" class="bg">
+			<a href="index.html"><img src="../assets/picture/go-bookcity.png" class="go-city"></a>
+			<p class="cur-date"></p>
+			<p class="sign-info">连续签到：&nbsp;<span class="day"></span>&nbsp;天&nbsp;&nbsp;&nbsp;本月累计：&nbsp;<span class="ticket"></span>&nbsp;书券</p>
+			<div class="calender">
+				
+			</div>
+		</div>
+	
+		<div class="sign-tip">
+			<p class="title">小贴士</p>
+			<p class="desc">只要您每日签到，每月获取的阅读券至少可以免费阅读约40章节的小说内容，赶快行动吧！</p>
+		</div>
+
+		<div class="book-recomm">
+		</div>
+		
+	</div>
+	
+	<script id="book" type="text/html">
+			<p class="title">重磅推荐</p>
+			<div class="booklist">
+				{{each info as v i}}
+				<a href="b-detail.html?bid={{v.bid}}" class="book">
+					<img src="../assets/picture/{{v.burl}}">
+					<p>{{v.bname}}</p>
+				</a>
+				{{/each}}			
+			</div>
+	
+	</script>
+	<script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../assets/js/template.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/swiper.jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/js/channel.js"></script>
+	<script type="text/javascript" src="../assets/js/p-sign.js"></script>
+	
+</body>
+</html>

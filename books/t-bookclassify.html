@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>书籍分类</title>
+    <meta content="zh-cn" http-equiv="Content-Language">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="title"  content="朵拉小说——追书看小说，超便捷的手机阅读神器">
+	<meta name="keywords"  content="无弹窗小说网小说，免费小说阅读,最热小说排行榜，经典小说排行榜前十名，微微一笑很倾城小说，好看的小说完本推荐，校园言情小说免费阅读，txt小说下载，都市言情小说，穿越玄幻，校园网游，武侠小说">
+	<meta name="description"  content="朵拉小说与国内各大出版社合作，为小说爱好者提供更多更全的各类免费小说上百万本。包括都市言情小说，穿越玄幻，校园网游，武侠小说等等，是年轻人必备的综合小说阅读平台。">
+    <link rel="stylesheet" type="text/css" href="../assets/css/core.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common_2.css" media="all" />
+
+	<link  rel="stylesheet" type="text/css" href="../assets/css/t-bookclassify.css" media="all" />
+</head>
+<body>
+	<!-- 标题栏 -->
+	<div class="header">
+		<div class="logo-wrap">
+		<a href="index.html" class="search-back"><img src="../assets/picture/arrow.png"></a>
+		书籍分类
+		</div>
+	</div>
+	
+	<!-- 分类栏 -->
+	<div class="classify_tag">
+		<a id="801">出版图书</a>
+		<a id="802">男生原创</a>
+		<a id="803">女生原创</a>
+	</div>
+	
+	<!-- 清楚浮动 -->
+	<div class="clear"></div>
+	
+	<!-- 轮播广告条 -->
+	<div id="topAdv">
+		
+	</div>
+
+	<!-- 分类列表 -->
+	<div class="classify_list" id="classify_list">
+			<a class="classify" href="javascript:linkAddFlag('803001','现代言情','http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995101140946319.jpg');">
+				<img src="http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995101140946319.jpg">
+				<span class="title">现代言情</span>
+				<div class="memo">总裁/宝宝/爽文/虐恋/高干/都市/婚宠/网游/</div>
+				
+			</a>
+			
+		
+			<a class="classify" href="javascript:linkAddFlag('803002','青春校园','http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995374908323375.jpg');">
+				<img src="http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995374908323375.jpg">
+				<span class="title">青春校园</span>
+				
+					<div class="memo">
+						
+							偶像同人/
+						
+							校园恋爱/
+						
+							青春文学/
+						
+							耽美纯爱/
+						
+					</div>
+				
+			</a>
+			
+		
+			<a class="classify" href="javascript:linkAddFlag('803003','幻想言情','http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995397914309038.jpg');">
+				<img src="http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995397914309038.jpg">
+				<span class="title">幻想言情</span>
+				
+					<div class="memo">
+						
+							异世大陆/
+						
+							仙侠/
+						
+							异族/
+						
+							爽文/
+						
+					</div>
+				
+			</a>
+			
+		
+			<a class="classify" href="javascript:linkAddFlag('803004','古装言情','http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995413885339878.jpg');">
+				<img src="http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995413885339878.jpg">
+				<span class="title">古装言情</span>
+				
+					<div class="memo">
+						
+							穿越重生/
+						
+							女强/
+						
+							武侠/
+						
+							种田/
+						
+							宅斗/
+						
+							宫斗/
+						
+							正剧/
+						
+					</div>
+				
+			</a>
+			
+		
+			<a class="classify" href="javascript:linkAddFlag('803005','悬疑科幻','http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995518387240307.jpg');">
+				<img src="http://zmring.oss-cn-hangzhou.aliyuncs.com/book/img/20170216/36995518387240307.jpg">
+				<span class="title">悬疑科幻</span>
+				
+					<div class="memo">
+						
+							悬疑惊悚/
+						
+							灵异鬼怪/
+						
+							科幻末世/
+						
+					</div>
+				
+			</a>
+			
+		</div>
+	<!-- 广告模板 -->
+	<script id="banner" type="text/html">
+		<div id="ad_banner">
+	        <div class="bd">
+	            <ul>
+					{{each topadvlist as v i}}
+		    			<li><a {{if v.type==1}}href="b-detail.html?bid={{v.param.bid}}&channel={{channel}}"{{else if v.type ==3}}href="{{v.param.url}}"{{/if}}><img src="../assets/picture/{{v.viewurl}}"></a></li>
+		    		{{/each}}
+				</ul>
+	        </div>
+        	<div class="hd"><ul class="book_ul"></ul></div>
+    	</div>
+	</script>
+	<!-- 二级分类列表 -->
+	<script id="secondlist" type="text/html">
+		{{each secondlist as v i}}
+			<a class="classify" href="javascript:linkAddFlag('{{v.classcode}}','{{v.name}}','{{v.picurl}}');">
+				<img src="../assets/picture/{{v.picurl}}">
+				<span class="title">{{v.name}}</span>
+				{{if v.third}}
+					<div class="memo">
+						{{each v.third as t j}}
+							{{t.name}}/
+						{{/each}}
+					</div>
+				{{/if}}
+			</a>
+			
+		{{/each}}
+	</script>
+	<script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../assets/js/template.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../assets/js/touchslide.1.1.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="../assets/js/weixincfgs.js"></script>
+	<script type="text/javascript" src="../assets/js/channel.js"></script>
+	<script type="text/javascript" src="../assets/js/t-bookclassify.js"></script>
+</body>
+</html>

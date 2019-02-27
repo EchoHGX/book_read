@@ -1,0 +1,47 @@
+﻿html{font: 16px/1.5 'Microsoft Yahei', simsun, Arial, Tahoma;}
+  	html,body {margin:0;padding:0;overflow: hidden;}
+.content {width: 100%;height: 100%;top:0;z-index: -1;position: absolute;}
+.return_btn{padding-left: 1.5rem;margin-top: 1rem;color: #999;display:block;text-decoration: none}
+  	.contactInfo{padding: 2rem 1.5rem 0rem 1.5rem;margin-top: 2rem;}
+.contactInfo div{padding: 0rem 0rem 0.8rem 0.3rem;border-bottom: 1px solid #ebebeb;}
+.contactInfo div img{width:1.5rem;margin-right: 0.5rem;vertical-align:middle;}
+.contactInfo div input{vertical-align:middle;resize: none;border:none;outline:medium;height: 1.6rem;position: relative;color: #555555;font-size: 0.98rem;width: 60%;}
+.codeInfo{padding: 0.8rem 1.5rem 0rem 1.5rem;}
+.codeInfo div{padding: 0rem 0rem 0.8rem 0.3rem;border-bottom: 1px solid #ebebeb;}
+.codeInfo div img{width:1.5rem;margin-right: 0.5rem;vertical-align:middle;}
+.codeInfo div input{vertical-align:middle;resize: none;border:none;outline:medium;height: 1.6rem;position: relative;color: #555555;font-size: 0.98rem;width: 60%;}
+.title{width: 3.5rem;display: inline-block;vertical-align: middle;color: #999;font-size: 0.98rem;}
+.login_out{margin:2rem 1.5rem 0rem 1.5rem;height: 2.8rem;line-height: 2.8rem;text-align: center;border-radius:2rem;color: #fff;background: #ffa7ae;font-size: 1rem;pointer-events: none;}
+  	.login_in{background:#FD6974;pointer-events: auto;}
+  	.tips{position:fixed;top:25%;left:-3.7%;z-index:125;border-radius:10px;text-align:center;box-shadow:0 0 4px #999;background:rgba(0,0,0,.65);font-size:14px;color:#fff;padding:10px;margin:auto 10%;width:80%;display: none;}
+  	#register{
+  		color: #477aab;
+    font-size: 0.9rem;
+    margin:1rem 1.5rem 0rem 0rem;
+    float: right;
+ 	}
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ddd;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ddd;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ddd;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ddd;
+}
+#forget_pwd{
+	color: #666;
+    font-size: 0.9rem;
+    margin:1rem 0rem 0rem 1.5rem;
+    float: left;
+}
+
+.wechat-login{display:none;background-color:rgba(0,0,0,1);position:fixed;width:100%;height:100%;text-align:center;}
+.wechat-login #wechat-area{position:absolute;top:4rem;width:100%;}
+
+.more{margin-top:8rem;color:#aaa;text-align:center;font-size: 0.8rem;}
+.login-btn{text-align:center;margin-top:1rem;}
+.login-btn img{width:3rem;padding:0 1rem; display:none;}

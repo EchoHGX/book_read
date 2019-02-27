@@ -1,0 +1,11 @@
+﻿/*列表*/
+		.free_book_title{margin-left:1rem;font-size:1.1rem;height:2rem;line-height:2rem;}
+    	.free_book_title a{float:right;margin-right:1rem;font-size:0.8rem;color:#477aab}   
+    	.free_book_title img{float:left;width:1.6rem;padding-top:0.2rem}
+		.free_book_title span{float:left;margin-left:1rem;} 	
+    	.free_book_row,.free_book_col{margin-top:1rem;border-bottom:10px solid #f5f5f5}
+		.free_book_row_list ul{text-align:center;padding:1rem 0 0.8rem;overflow:hidden}
+    	.free_book_row_list ul li{width:33.33%;float:left;}
+    	.free_book_row_list ul li a{display:block;}
+    	.free_book_row_list ul li a img{width:5.5rem;max-width:100px;box-shadow:0 0 4px 0 #bbb}
+    	.free_book_row_list ul li a span{display:block;color:##666;font-size:0.8rem;padding-top:0.3rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;padding-left:1.1rem;padding-right:1.1rem}

@@ -1,0 +1,52 @@
+﻿.review-ul li {width: 100%;background: #fff;display: -moz-box;display: -webkit-box;display: box;border-bottom: 0;padding: 12px 0}
+.review-ul .rew-li-l {padding: 0 10px 0 10px;overflow: hidden}
+.review-ul .rew-li-l img {width: 30px;height: 30px;border-radius: 20px}
+.review-ul .rew-li-r {position: relative;-moz-box-flex: 1.0;-webkit-box-flex: 1.0;box-flex: 1.0;font-size: 12px;color: #999;padding-right: 10px;overflow: hidden}
+.review-ul .rew-li-r .tit {display: block;font-size: 14px;color: #333;border-bottom: 0;line-height: 16px;height: auto;margin-bottom: 8px;position: relative;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.review-ul .rew-li-r .r_title {color: #333;display: block;padding-bottom: 5px;font-size: 14px}
+.review-ul .rew-li-r .tit a {color: #333}
+.rew-li-r .tit .jinghua-ico {position: absolute;font-size: 12px;right: 0;color: #999;}
+.jinghua-ico img {width: 16px;display: inline-block;padding-right: 3px;vertical-align: middle;}
+.rew-li-r .text {display: block;line-height: 18px;overflow: hidden}
+.rew-li-r .rew-time {display: block;width: 100%;font-size: 12px;color: #999;position: relative;padding-top: 4px}
+.rew-li-r .rew-time .res {display: block;position: absolute;top: 5px;right: 0}
+.rew-li-r .tit .jinghua-ico {top: 12px;}
+#reply {background: #fff;padding-bottom: 15px;overflow: hidden;}
+#replyList {padding: 0;}
+.reply-form {background: #fff;padding: 5px 10px 10px;}
+.reply-form textarea {width: 100%;border: solid 1px #ddd;border-radius: 3px;}
+.reply_box {padding: 10px;margin-bottom: 15px;}
+.reply_box li {padding-bottom: 10px;color: #666;font-size: 14px;width: 100%;}
+.reply_box li a {color: #419af4;}
+.reply-input {text-align: center;padding: 0 10px;}
+.reply-input-r,.reply-input-l {width: 47%;border-radius: 4px;float: right;background: #fff;color: #fd6974;height: 32px;line-height: 32px;border: solid 1px #fd6974;}
+.reply-input-l {background: #fd6974;border: solid 1px #fd6974;color: #fff;float: left;}
+.replay_cont {padding: 0;overflow: hidden;}
+.replay_tit {background: #fff;padding: 0;border: solid 1px #eee;border-bottom: none;overflow: hidden;}
+.replay_tit img {vertical-align: middle;padding-left: 3px}
+#reply_box {overflow: hidden;}
+#reply_box li {display: -moz-box;display: -webkit-box;display: box;width: 100%;}
+.reply_box li:last-child {padding-bottom: 0px;margin-bottom: 0px;}
+#reply_box .reply-l {padding-right: 5px;}
+#reply_box .reply-l img {width: 30px;height: 30px;border-radius: 20px;}
+#reply_box .reply-r {-moz-box-flex: 1.0;-webkit-box-flex: 1.0;box-flex: 1.0;font-size: 12px;border-bottom: solid 1px #ddd;padding-bottom: 10px;color: #999}
+.reply-r span {display: block;}
+.reply-r .r-time {position: relative;word-wrap: break-word;}
+.r-time .r-response {position: absolute;top: 2px;right: 0;}
+.reply-r span img {vertical-align: middle;}
+.review-ul .rew-li-r .tit b {background: #e23030;display: inline-block;color: #fff;font-size: 12px;margin-left: 5px;font-weight: normal;padding: 0 5px;line-height: 16px;}
+#reply_box li:last-child .reply-r {border: none;}
+.user_title {font-size: 14px;color: #333;}
+.wx_nav_box {background: #505050;position: relative;height: 44px}
+.wx_nav_box a.logo {position: absolute;left: 50%;margin-left: -27px;top: 0;display: block;font-size: 18px;line-height: 44px;}
+.wx_nav_box .wx_home {position: absolute;left: 10px;top: 0;width: 80px;height: 44px}
+.wx_nav_box .wx_home a {width: 20px;height: 42px;display: inline-block}
+.wx_home img {width: 12px;padding-top: 12px}
+.wx_nav_box a {color: #fff}
+.wx_nav_box .wx_list {position: absolute;right: 0;top: 0;width: 40px;}
+.wx_list img {width: 30px;display: block;margin-top: 7px;border-radius: 50%;}
+.wx_header {overflow: hidden}
+input[type=radio],input[type=checkbox],input[type=submit] {-webkit-appearance: none;-moz-appearance: none;-webkit-user-select: none;-moz-appearance: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-moz-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight-color: transparent;-moz-touch-callout: none;-webkit-touch-callout: none}
+input::-webkit-input-placeholder {color: #999;outline: none;font-size: 14px;}
+input::-moz-input-placeholder {color: #999;font-size: 14px;outline: none}
+textarea::-webkit-input-placeholder {color: #999;font-size: 14px;outline: none}

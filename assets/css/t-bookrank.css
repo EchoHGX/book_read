@@ -1,0 +1,7 @@
+﻿/*排行榜 */
+.rank{padding-left: 0.7rem;position:relative}
+.rank a {display:block;height:7.2rem;padding-top: 0.5rem;padding-bottom: 0.2rem;}
+.rank a img{display:block;float:left;width:7rem;margin-right:1rem; }
+.rank span{width:13rem;display: block;font-size:0.8rem;padding-top:0.5rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.diver {width: 62%;border-bottom: 1px solid #f5f5f5;margin: 0 auto;margin-top: 1.75rem;margin-right: 3%;}
+.rank .left-arrow{position:absolute;right:.9rem;width:.9rem;top:3rem}

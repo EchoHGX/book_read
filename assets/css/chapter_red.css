@@ -1,0 +1,27 @@
+﻿@charset "utf-8";
+
+body{background:#fff}
+.demo .font-change a{background:#fff}
+.txtbox-item h3{color:#333}
+.sign{border-bottom:solid 1px #eee}
+.font_list{border-bottom:solid 10px #f5f5f5}
+.adv{border-bottom:solid 1px #f9f9f9}
+.sign a, .sign span{color:#ff7272}
+.font_list a{color:##fd6974}
+.advlist .read{color:red}
+.advtitle{color:#999}
+
+.gege{width:100%;border-bottom:solid 10px #f5f5f5}
+.advtitle{color:#fd6974;margin-bottom:15px;font-size:16px}
+
+.foot_menu{background-color:#fff}
+
+.tip-client{width:100%;height:3rem;position:fixed;bottom:0;background-color:rgba(0,0,0,.7);z-index:100;display:none}
+.tip-client .cancel{width:1.2rem;float:left;padding:1rem;}
+.tip-client .icon-shuke{width:2rem;float:left;margin-top:0.5rem}
+.tip-client .client-desc{float:left;line-height:1rem;margin-top:0.5rem;margin-left:1rem;color:#fff;letter-spacing:.1rem}
+.tip-client .yellow{color:#ffff00}
+.tip-client .download{float:right;width:4.4rem;margin-right:1rem;margin-top:0.8rem}
+.client-desc .tag1{font-size:1rem;}
+.client-desc .tag2{font-size:0.6rem;margin-top:0.2rem}
+.tip-client-bottom{height:3rem;display:none;background-color:#fff;}

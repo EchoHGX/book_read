@@ -1,0 +1,46 @@
+﻿html{font: 16px/1.5 'Microsoft Yahei', simsun, Arial, Tahoma;}
+    	html,body {margin:0;padding:0;overflow: hidden;}
+    	body{background: #fff;}
+    	.wx_nav_box{background:#505050;position:relative;height:44px}.wx_nav_box a.logo{position:absolute;left:45%;margin-left:-27px;top:0;display:block;font-size:18px;line-height:44px;}.wx_nav_box .wx_home{position:absolute;left:10px;top:0;width:80px;height:44px}.wx_nav_box .wx_home a{width:20px;height:42px;display:inline-block}.wx_home img{width:12px;padding-top:12px}.wx_nav_box a{color:#fff}.wx_nav_box .wx_list{position:absolute;right:0;top:0;width:40px;}.wx_list img{width:30px;display:block;margin-top:7px;border-radius:50%;}#ad_banner{position:relative;overflow:hidden}#ad_banner .change_ico{position:absolute;right:10px;top:10px;z-index:9}.wx_header{overflow:hidden}
+    	.bg{width:100%;text-align:center;position:absolute}
+    	.bg img{width:94%;margin-top:10px; pointer-events: none;}
+    	.content{position:relative;}
+    	.return_btn{padding-left: 1.5rem;margin-top: 1rem;color: #999;}
+    	.content .info {color:#c3c3c3;float:left;margin-top:5.5rem;font-size:0.8rem;margin-left:2rem;font-weight:bold}
+    	.content .num {float:left;margin-top:1.5rem;color:#fff;margin-left:1.3rem;}
+		.total{font-size:1.8rem;line-height:1.8rem}
+		.surplus{font-size:0.7rem;line-height:1rem}
+		.state{color:#c3c3c3;font-size:0.8rem;margin-top:1.8rem;margin-left:0.5rem;font-weight:bold}
+		.clear{clear:both;margin-bottom:1rem}
+		.contactInfo{padding: 1rem 1.5rem 0rem 1.5rem;margin-top: 2rem;}
+		.contactInfo div,.codeInfo div,.recode div,.validateInfo div{padding: 0rem 0rem 0.8rem 0.3rem;border-bottom: 1px solid #ebebeb;}
+		.contactInfo div img{width:1.5rem;margin-right: 0.5rem;vertical-align:middle;}
+		.contactInfo div input,.codeInfo div input,.recode div input,.validateInfo div input{vertical-align:middle;resize: none;border:none;outline:medium;height: 1.6rem;position: relative;color: #555555;font-size: 0.98rem;}
+		.codeInfo,.recode,.validateInfo{padding: 0.8rem 1.5rem 0rem 1.5rem;}
+		#phone{width: 60%;}
+		#code{width: 31%;}
+		#btn{font-size: 0.8rem;background: #ffa7ae;color: #fff;border-radius: 10px;float: right;}
+		
+		.title_info{width: 4.2rem;display: inline-block;color: #c3c3c3;font-size: 0.98rem;vertical-align: middle;}
+		.login_out{margin:2rem 1.5rem 0rem 1.5rem;height: 2.8rem;line-height: 2.8rem;text-align: center;border-radius:2rem;color: #fff;background: #ffa7ae;font-size: 1rem;pointer-events: none;}
+    	.login_in{background:#FD6974;pointer-events: auto;}
+    	.tips{position:fixed;top:25%;left:-3.7%;z-index:125;border-radius:10px;text-align:center;box-shadow:0 0 4px #999;background:rgba(0,0,0,.65);font-size:14px;color:#fff;padding:10px;margin:auto 10%;width:80%;display: none;}
+    	#login{
+    		color: #477aab;
+		    font-size: 0.9rem;
+		   	width:4rem;
+		    margin: 1.5rem auto;
+		    text-align: center;
+	  	}
+	  	input::-webkit-input-placeholder { /* WebKit browsers */
+		    color:    #ddd;
+		}
+		input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color:    #ddd;
+		}
+		input::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color:    #ddd;
+		}
+		input:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    color:    #ddd;
+		}

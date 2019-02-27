@@ -1,0 +1,63 @@
+﻿/*顶部栏 */
+  	.person_img{position: absolute;right: .2rem;top:0.2rem;width:2.8rem;display:block}
+  	.person_img{margin-right: 0rem;border-radius: 0rem}
+  	.person_img img{width:1.4rem; padding: 0.3rem ;border-radius: 1rem}
+  	.top_center a{padding: 0px 20px;font-size: 1.1rem;height: 1.7rem;line-height: 1.7rem;display: inline-block;margin-right: -6px;}
+.top_center span{display:block;font-size:0.9rem}
+.suffix{width:1rem;margin:0 auto}
+.top_active{color:#FD6974;}
+.top_common{color:#999999;}
+.top_active .suffix{border-bottom:4px solid #FD6974}
+.book-shelf{position: absolute;left: .2rem;top:0.2rem;width:2.8rem;display:block}
+.book-shelf img{width:1.4rem; padding: 0.3rem ;border-radius: 1rem}
+			
+  	.top_search{position: absolute;right: 2.8rem;top: 0.2rem;width:2.8rem}
+  	.top_search img{width: 1.4rem;padding:0.3rem 0.2rem 0}
+  	/*小编推荐 */
+ 	.recomm{margin-top:0.3rem}
+ 	.recomm_title{margin-left:1rem;font-size:1rem;height:2rem;line-height:2rem;color:#333}
+ 	.recomm_title a{float:right;margin-right:1rem;font-size:0.7rem;color:#477aab}
+ 	.recomm_content ul{text-align:center;padding:1rem 0 1.5rem;overflow:hidden}
+ 	.recomm_content ul li{width:33.33%;float:left;}
+ 	.recomm_content ul li a{display:block;}
+ 	.recomm_content ul li a img{width:5.5rem;max-width:100px;box-shadow:0 0 4px 0 #bbb}
+ 	.recomm_content ul li a span{display:block;color:#666;font-size:0.8rem;padding-top:0.3rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;padding-left:1.1rem;padding-right:1.1rem}
+ 	/*顶部分类 */
+  	.topClass_content ul{text-align:center;padding:0.3rem 0 1rem;overflow:hidden}
+  	.topClass_content ul li{width:20%;float:left;text-align: center;}
+  	.topClass_content ul li a{display:block;}
+  	.topClass_content ul li a span{display:block;color:#555;font-size:0.8rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;vertical-align: bottom;font-weight: bold;}
+.topClass_content a {width: 4rem;height:4.5rem;position:relative;margin:0 auto;}
+.icon{position: absolute;right: 0;bottom: 1.625rem;left: 0;margin: auto;width:2.5rem;height:2.5rem}
+.icon-end{background-size: 2.5rem 2.5rem}
+.topClass_content span{position: absolute;right: 0;bottom: .1875rem;left: 0;}
+.icon-1{background-image: url(../images/t-category.png)}
+.icon-2{background-image: url(../images/t-ranking.png)}
+.icon-3{background-image: url(../images/t-discount.png)}
+.icon-4{background-image: url(../images/t-boutique.png)}
+.icon-5{background-image: url(../images/t_pay.png)}
+/*基因共用*/
+.gene_book_title{margin-left:1rem;font-size:1rem;height:2rem;line-height:2rem;}
+.gene_book_title a{float:right;margin-right:1rem;font-size:0.7rem;color:#477aab}    	
+.gene_book_row,.gene_book_col{margin-top:0.5rem;border-bottom:6px solid #f5f5f5}
+.gene_book_row_list ul{text-align:center;padding:1rem 0 1.5rem;overflow:hidden}
+.gene_book_row_list ul li{width:33.33%;float:left;}
+.gene_book_row_list ul li a{display:block;}
+.gene_book_row_list ul li a img{width:5.5rem;max-width:100px;box-shadow:0 0 4px 0 #bbb}
+.gene_book_row_list ul li a span{display:block;color:#666;font-size:0.8rem;padding-top:0.3rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;padding-left:1.1rem}
+/*分割栏*/		
+.split_line{border-top:1px solid #fff;border-bottom:1px solid #fff;background-color:#f5f5f5;width:100%;text-align:center;color:#FD6974;font-size:0.7rem;padding:0.5rem 0;}
+/*clear*/
+.clear{padding-bottom:0.05rem;}
+ 	
+.search{position:fixed; top:0; left: 0;width: 100%;background-color: #ffffff;z-index: 99;border-bottom:1px solid #efefef}
+.search-bottom{height:2.5rem}
+
+
+.tip-client{border-top:1px solid #f5f5f5;width:100%;height:3rem;position:fixed;bottom:0;background-color:#fff;z-index:100;display:none}
+.tip-client .cancel{width:0.6rem;float:left;padding:1rem;margin-top:0.2rem}
+.tip-client .icon-shuke{width:2rem;float:left;margin-top:0.5rem}
+.tip-client .client-desc{float:left;line-height:1rem;margin-top:0.5rem;margin-left:0.5rem}
+.tip-client .download{float:right;width:3.6rem;margin-right:1rem;margin-top:0.8rem}
+.client-desc .tag2{font-size:0.7rem;margin-top:0.1rem}
+.tip-client-bottom{height:3rem;display:none}

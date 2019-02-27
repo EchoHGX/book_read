@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+    <meta name="title"  content="朵拉小说——追书看小说，超便捷的手机阅读神器">
+	<meta name="keywords"  content="无弹窗小说网小说，免费小说阅读,最热小说排行榜，经典小说排行榜前十名，微微一笑很倾城小说，好看的小说完本推荐，校园言情小说免费阅读，txt小说下载，都市言情小说，穿越玄幻，校园网游，武侠小说">
+	<meta name="description"  content="朵拉小说与国内各大出版社合作，为小说爱好者提供更多更全的各类免费小说上百万本。包括都市言情小说，穿越玄幻，校园网游，武侠小说等等，是年轻人必备的综合小说阅读平台。">
+    <title>登录选择</title>
+
+	<link  rel="stylesheet" type="text/css" href="../assets/css/p-login-choose.css" media="all" />
+</head>
+<body>
+	<div class="wechat-login">
+		<div id="wechat-area">
+		
+		</div>
+	
+	</div>
+
+	<div class="content">
+		<a class="return_btn" href="index.html">返回</a>
+		<div class="contactInfo">
+			<div>
+	<!-- 			<img src="../assets/picture/icon_mobilephone.png"> -->
+				<span class="title">手机号</span>
+				<input type="tel" id="phone" placeholder="请输入手机号码" onkeyup='this.value=this.value.replace(/\D/gi,"")' maxlength="11" onFocus="if (placeholder =='请输入手机号码'){placeholder ='';}" onBlur="if (placeholder ==''){placeholder='请输入手机号码';}">
+				<img id="clearNum" style="float: right;display: none;" src="../assets/picture/icon_cancel.png">
+			</div>
+		</div>
+		<div class="codeInfo">
+			<div>
+	<!-- 			<img src="../assets/picture/icon_password.png"> -->
+				<span class="title">密码</span>
+				<input id="password" type="password" placeholder="请输入密码" onFocus="if (placeholder =='请输入密码'){placeholder ='';}" onBlur="if (placeholder ==''){placeholder='请输入密码';}">
+			</div>
+		</div>
+		<div id="login" class="login_out">
+			登录
+		</div>
+		<div id="forget_pwd">忘记密码？</div>
+		<div id="register">立即注册</div>
+		<div class="tips" id="tips"></div>
+		
+    	<div class="more">
+    		使用其他帐号登录
+    	</div>
+		<div class="login-btn">
+			<img src="../assets/picture/wechat.png" class="wechat-login-btn"  onclick="wexinlogin()">
+			
+			<!--<img src="../assets/picture/qq@3x.png" class="qq-login-btn" onclick="qqlogin()">-->
+			
+		</div>
+    
+    </div>
+    <!--微信扫码登陆 -->
+	<script src="../assets/js/wxlogin.js"></script>
+	<!-- qq登陆 -->
+	<script type="text/javascript" src="../assets/js/qc_loader.js" data-appid="101423545" data-redirecturi="http://shuke.zmapp.com/qq-login-callback.html" charset="utf-8"></script>
+	
+	<script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/origin.js"></script>
+	<script type="text/javascript" src="../assets/js/md5.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/p-login-choose.js"></script>
+</body>
+</html>

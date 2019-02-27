@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>排行榜</title>
+    <meta content="zh-cn" http-equiv="Content-Language">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="title"  content="朵拉小说——追书看小说，超便捷的手机阅读神器">
+	<meta name="keywords"  content="无弹窗小说网小说，免费小说阅读,最热小说排行榜，经典小说排行榜前十名，微微一笑很倾城小说，好看的小说完本推荐，校园言情小说免费阅读，txt小说下载，都市言情小说，穿越玄幻，校园网游，武侠小说">
+	<meta name="description"  content="朵拉小说与国内各大出版社合作，为小说爱好者提供更多更全的各类免费小说上百万本。包括都市言情小说，穿越玄幻，校园网游，武侠小说等等，是年轻人必备的综合小说阅读平台。">
+    <link rel="stylesheet" type="text/css" href="../assets/css/core.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common_2.css" media="all" />
+  <link  rel="stylesheet" type="text/css" href="../assets/css/t-bookrank-detail.css" media="all" />
+</head>
+<body>
+	<!-- 标题栏 -->
+	<div class="header">
+		<div class="logo-wrap">
+			<a href="t-bookrank.html" class="search-back"><img src="../assets/picture/arrow.png"></a>
+			<span>排行榜</span>
+			<a href="javascript:;" class="share"><img src="../assets/picture/share-grep.png"></a>
+		</div>
+	</div>
+	
+
+	<!-- 分类栏 -->
+	<div class="classify_tag">
+		<a id="1">男生</a>
+		<a id="2">女生</a>
+	</div>
+	
+	
+	<div class="book_rank_list">
+		
+	</div>
+	
+	<a class="bookload">点击加载更多</a>
+	
+	<!-- 书本列表模板 -->
+	<script id ="booklist" type="text/html">
+		{{each booklist as v i}}
+			<div class="book_comm">
+				<a href="b-detail.html?bid={{v.bid}}&channel={{channel}}">
+					<div class="book_img"><img class="lazy_img" data-original="{{v.iconurl}}"></div>
+					<div class="book_content">
+						<span class="book_title">{{v.bname}}</span>
+						<span class='book_author'>{{v.author}}</span>
+						<span class="book_num">{{if v.status=='0'}}连载{{else}}完结{{/if}}&nbsp;{{v.wordnum}}</span>
+						<div class="book_memo">{{v.introduction}}</div>
+					</div>
+				<div class="diver"></div>
+				</a>
+			</div>
+		{{/each}}
+	</script>
+	
+	<script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../assets/js/template.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.lazyload.js"></script>
+	<script type="text/javascript" src="../assets/js/touchslide.1.1.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/channel.js"></script>
+	<script type="text/javascript" src="../assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="../assets/js/weixincfgs.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/t-bookrank-detail.js"></script>
+
+</body>
+</html>

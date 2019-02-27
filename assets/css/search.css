@@ -1,0 +1,19 @@
+﻿/*标题栏*/
+.page-header{border-bottom:.5rem solid #f5f5f5}
+.back{padding:.3rem .5rem;position:absolute;top:.2rem;left:.5rem;}
+.back img{width:1.4rem;display:block}
+.search-box{position:absolute;top:.4rem;left:3rem;height:1.6rem;width:15.5rem;border-radius:0.8rem;border: 1px solid #f5f5f5;background-color:#f5f5f5}
+.search-box input{font-size:.8rem;position:absolute;top:.2rem;left:0;margin-left:1.25rem;width:13rem;border:none;background-color:#f5f5f5;height:1.2rem;outline: none;background: transparent;} 
+.search-btn{padding:.3rem .5rem;position:absolute;top:.4rem;right:.5rem;font-size:.8rem;color:#767676}
+/*热门搜索*/
+.hot-row{width:100%;padding-bottom:.2rem}
+.hot-row a{width:44%;display:inline-block;color:#000;padding-left:.8rem;font-size:0.9rem}
+.hot-fir{color:#FF8585}
+.hot-sec{color:#FE8123}
+.hot-thr{color:#FFC430}
+.hot-com{color:#2A2A2A}
+/*历史记录*/
+.del{padding:0.4rem;position:absolute;top:0;right:.6rem;}
+.del img{display:block;width:1rem}
+.history{display:inline-block;width:90%;padding:.4rem 0;margin:0 .8rem;font-size:.85rem;border-bottom:1px solid #f5f5f5}
+  

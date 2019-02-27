@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>子分类界面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.75,maximum-scale=1"/>
+<meta name="MobileOptimized" content="240"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="title"  content="朵拉小说——追书看小说，超便捷的手机阅读神器">
+	<meta name="keywords"  content="无弹窗小说网小说，免费小说阅读,最热小说排行榜，经典小说排行榜前十名，微微一笑很倾城小说，好看的小说完本推荐，校园言情小说免费阅读，txt小说下载，都市言情小说，穿越玄幻，校园网游，武侠小说">
+	<meta name="description"  content="朵拉小说与国内各大出版社合作，为小说爱好者提供更多更全的各类免费小说上百万本。包括都市言情小说，穿越玄幻，校园网游，武侠小说等等，是年轻人必备的综合小说阅读平台。">
+<link href="../assets/css/main.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../assets/css/common_2.css" media="all" />
+
+<link  rel="stylesheet" type="text/css" href="../assets/css/t-bookclassify-detial.css" media="all" />
+</head>
+
+<body>
+
+	<div class="top">
+		<!-- 标题栏 -->
+		<div class="header">
+			<div class="logo-wrap">
+				<a href="t-bookclassify.html" class="search-back"><img src="../assets/picture/arrow.png"></a>
+				<span>书籍分类</span>
+				<a href="javascript:;" class="share"><img src="../assets/picture/share-grep.png"></a>
+			</div>
+		</div>
+		<div style="border-bottom: 1px solid #e2e2e2;height: 2.7rem;">
+			<div id="select">
+				<span class="select1">综合排序</span>
+				<span class="chevron_down"></span>
+			</div>
+			<span style="float: left;color:#e2e2e2;width:1px;height: 2.7rem;line-height: 2.7rem;">|</span>
+			<div onclick="screen(this.id)" style="float: left;width:49.8%;text-align: center;height: 2.7rem;line-height: 2.7rem;">
+				<span class="select2">筛选</span>
+				<span class="chevron_down"></span>
+			</div>
+		</div>
+		<div id="selectAll" style="display:none;" key="sequence">
+			<div dat="" class="selectCss" style="padding: 0rem 0.8rem 0rem 0.8rem;">综合排序</div>
+			<div dat="1">畅销</div>
+			<div dat="2">更新时间</div>
+			<div dat="3">字数</div>
+		</div>
+	</div>
+	<div style="margin-top:4.3rem;">&nbsp;</div>
+	<div class="screenselect" id="screen">
+		<div>分类&nbsp;.</div>
+		<ul id="reclassify" key="classcode">
+			
+		</ul>
+		<div>状态&nbsp;.</div>
+		<ul  key="state">
+			<li dat="0">连载</li>
+			<li dat="1">完结</li>
+		</ul>
+		<div>价格&nbsp;.</div>
+		<ul key="purchase">
+			<li dat="1">免费</li>
+			<li dat="2">付费</li>
+		</ul>
+		<div>更新时间&nbsp;.</div>
+		<ul key="refreshtime">
+			<li dat="3">3天内</li>
+			<li dat="7">7天内</li>
+			<li dat="15">15天内</li>
+			<li dat="30">一个月内</li>
+		</ul>
+		<div>字数&nbsp;.</div>
+		<ul id="wordNum"  key="wordnum">
+			<li dat="1">20万字以下</li>
+			<li dat="2">20-30万字</li>
+			<li dat="3">30-50万字</li>
+			<li dat="4">50-100万字</li>
+			<li dat="5">100-200万字</li>
+			<li dat="6">200万字以上</li>
+		</ul>
+		<div id="ensure">确定</div>
+	</div>
+	
+	<div class="booklist">
+		
+	</div>
+	<div class="placeholder">
+		<img src="../assets/picture/bg_nobooks.png">
+		<div style="width: 9rem;margin: 0 auto;">抱歉~未筛选到书籍请尝试下其他组合</div>
+	</div>
+	<a class="bookload" onclick="moreComment()" style="display:none;">点击加载更多</a>
+		
+
+	
+	
+	
+	<script type="text/javascript" src="../assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.lazyload.js"></script>
+	<script type="text/javascript" src ="../assets/js/status.js"></script>
+	<script src="../assets/js/ifslazy-common-tool-tool.js"></script>
+	<script type="text/javascript" src="../assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="../assets/js/weixincfgs.js"></script>
+	
+	<script type="text/javascript" src="../assets/js/channel.js"></script>
+	<script type="text/javascript" src="../assets/js/t-bookclassify-detial.js"></script>
+</body>
+</html>

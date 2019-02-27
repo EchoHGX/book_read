@@ -1,0 +1,57 @@
+﻿*{   
+    -webkit-touch-callout:none;  /*系统默认菜单被禁用*/   
+    -webkit-user-select:none; /*webkit浏览器*/   
+    -khtml-user-select:none; /*早期浏览器*/   
+    -moz-user-select:none;/*火狐*/   
+    -ms-user-select:none; /*IE10*/   
+    user-select:none;   
+	}
+	input {-webkit-user-select:auto; /*webkit浏览器*/} 
+		
+	
+		/*标题栏*/
+		.page-header{height:2.5rem;position:relative}
+		.header-back{position: absolute;top: 0;bottom: 0;left: 0;padding: .5rem .8rem .625rem 0.6rem;}
+		.arrow-black{width: 0.7rem}
+		.header-search{position: absolute;top: 0;bottom: 0;right: 0;padding: .5rem 1rem .625rem .8rem;}
+		.search-black{width:1.4rem}
+		.header-diver{position: absolute;top:2.5rem;width:100%;border-bottom:1px solid #f5f5f5}
+		.header-title-right{position: absolute;top:0.48rem;left:2.7rem;font-weight:bold;letter-spacing:0.2rem;font-size:0.9rem}
+		.header-chosen{text-align:center;}
+		.chosen-item{padding: 0px 0.8rem;display: inline-block;letter-spacing:0.1rem}
+		.chosen-item span{display:block}
+		.item-name{line-height: 2rem;height:2rem;color:#9F9F9F}
+		.item-suffix{width: 1rem;margin: 0 auto;}
+		.item-active .item-name{color:#FD6974}
+		.item-active .item-suffix{border-bottom:3px solid #FD6974;}
+		/*状态栏*/
+		.status-bar {position:relative;margin:0.4rem 0rem;font-weight:600;letter-spacing:0.1rem;height:2rem;}
+		.bar-title{position:absolute;padding:0.4rem 1rem}
+		.bar-title-center{text-align:center;padding:0.4rem 1rem}
+		.edit {position:absolute;top:0;display:block;padding:0.4rem 1rem;right:0rem;font-weight:200}
+		.cancel{position:absolute;top:0;display:none;padding:0.4rem 1rem;right:0rem;font-weight:200}
+		.chose-all{position:absolute;top:0;display:none;padding:0.4rem 1rem;left:0rem;font-weight:200}
+		
+		
+		.book{height:6rem;position:relative;margin-top:1rem;margin-bottom:1rem;border-bottom:1px solid #f5f5f5}
+		.book-id{display:none}
+		.chosen-radio{float:left;width:7%;text-align:right;height:6rem;line-height:6rem;display:none}
+		.book-detail{float:left;width:90%;overflow: hidden;height:6rem;margin-left:3%}
+		.book-img{width: 4rem;border-radius: 2px;box-shadow: 0 0 10px 0 #bbb;float:left;margin-right:1rem;}
+		.book-title{width:50%;}
+		.chosen-img{width:1rem;}
+		.book-info p{margin-bottom:0.4rem}
+		.book-status{font-size:0.8rem}
+		.book-read{display:block;right:1rem;position:absolute;color:#FD6974;font-size:0.9rem}
+		
+		.delete{left:20%;display:none;color:#fff;border-radius:1rem;background-color:#FD6974;height:2rem;position:fixed;bottom:1rem;width:60%;text-align:center;line-height:2rem}
+		.delete-bottom{height:3rem;display:none}
+		
+		
+		/*下载提示*/
+		
+		.go-download{display:none;position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.82);height: 100%;width: 100%;z-index: 1000}
+		.go-download .gd-bg{position:absolute;width:16rem;left:calc(50% - 8rem);top:9rem}
+		.go-download .gd-close{position:absolute;width: 1rem;top: 12.4rem;left: calc(50% + 6.2rem);z-index: 1001;}
+		.go-download .gd-btn{position:absolute;width: 10rem;left: calc(50% - 5rem);top: 22rem;z-index: 1001;}
+		
